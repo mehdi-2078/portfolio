@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto, serif;
+  color: #ffffff;
+  background-image: linear-gradient(
+    to left bottom,
+    #68305c,
+    #5d3166,
+    #3b2a50,
+    #212036,
+    #232a3f,
+    #263447,
+    #2b3e4e,
+    #36687f
+  );
+}
