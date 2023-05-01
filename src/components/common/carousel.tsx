@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Image from 'next/Image';
 // @ts-ignore
@@ -50,7 +50,7 @@ export const MyCarousel = () => {
   };
   return (
     <>
-      <div className="w-10/12 md:w-11/12 bg-gray-900 pb-8 mx-auto">
+      <div className="w-10/12 md:w-11/12 pb-8 mx-auto">
         <div className="text-center mt-10 pt-2">
           <span className="text-yellow-400 text-3xl text-center pb-2 border-b-gray-200 border-b-2 ">
             My Projects
