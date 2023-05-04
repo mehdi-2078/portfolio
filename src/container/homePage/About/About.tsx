@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import mehdi from '../../../public/assets/images/mehdi8.png';
+import mehdi from '../../../../public/assets/images/mehdi8.png';
 
 export const About = () => {
   return (

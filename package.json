@@ -19,22 +19,24 @@
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.39",
     "classnames": "^2.3.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "hamburgers": "^1.2.1",
     "keen-slider": "^6.8.5",
     "next": "^13.3.4",
+    "next-gallery": "^1.2.1",
+    "next-images": "^1.8.5",
     "next-seo": "^6.0.0",
     "nextjs-progressbar": "^0.0.16",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-image-gallery": "^1.2.11",
-    "react-multi-carousel": "^2.8.3",
-    "react-responsive-carousel": "^3.2.23",
+    "react-photo-album": "^2.1.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-jsx-plugin-postcss": "^4.0.1",
-    "swiper": "^9.2.4"
+    "swiper": "^9.2.4",
+    "yet-another-react-lightbox": "^3.5.3"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.3.4",

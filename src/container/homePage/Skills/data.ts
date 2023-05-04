@@ -1,8 +1,8 @@
-import bootstrap from '../../../public/assets/images/skills/bootstrap.png';
-import css from '../../../public/assets/images/skills/css.png';
-import html from '../../../public/assets/images/skills/html5.png';
-import javascript from '../../../public/assets/images/skills/javascript.png';
-import tailwind from '../../../public/assets/images/skills/tailwind.png';
+import bootstrap from '../../../../public/assets/images/skills/bootstrap.png';
+import css from '../../../../public/assets/images/skills/css.png';
+import html from '../../../../public/assets/images/skills/html5.png';
+import javascript from '../../../../public/assets/images/skills/javascript.png';
+import tailwind from '../../../../public/assets/images/skills/tailwind.png';
 
 interface Item {
   key: number;
