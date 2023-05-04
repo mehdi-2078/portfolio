@@ -6,7 +6,7 @@ import tailwind from '../../../public/assets/images/skills/tailwind.png';
 
 interface Item {
   key: number;
-  src: string | StaticImageData;
+  src: string;
   title: string;
 }
 export const data: Item[] = [

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 interface Item {
   key: number;
-  src: string | StaticImageData;
+  src: string;
   title: string;
 }
 interface Props {
