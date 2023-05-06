@@ -1,10 +1,8 @@
-import Image from 'next/image';
-
 const B = () => {
   return (
     <div className="w-[96%] mx-auto text-white pt-16">
       <div className="container mx-auto flex flex-col items-center justify-center md:flex-row my-8">
-        <div className="ml-0 md:ml-12 sticky">
+        <div className="ml-0 sticky">
           <div className="container mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden p-10 h-full">
               <div
@@ -64,11 +62,11 @@ const B = () => {
                 </div>
               </div>
             </div>
-            <Image
-              className="mx-auto -mt-36 md:-mt-36"
-              src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
-              alt="image"
-            />
+            {/* <Image */}
+            {/*  className="mx-auto -mt-36 md:-mt-36" */}
+            {/*  src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" */}
+            {/*  alt="image" */}
+            {/* /> */}
           </div>
         </div>
       </div>

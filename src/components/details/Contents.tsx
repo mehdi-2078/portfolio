@@ -32,9 +32,9 @@ export const Contents = () => {
         </span>
       </div>
       <div className="text-[15px] my-4">
-        <span className="text-2xl">🔭</span> <span>Project link:</span>&nbsp;
+        <span className="text-2xl">🔭</span> <span>Live project:</span>&nbsp;
         <a
-          title="Project link"
+          title="Live project"
           className="text-blue-400 hover:border-b-2 hover:text-blue-300 "
           href="#"
         >

@@ -11,8 +11,8 @@ export const Header = () => {
   };
 
   return (
-    <>
-      <div className="flex fixed z-20 md:w-[80%]  left-[10%] w-[90%] pt-6 mx-auto justify-between">
+    <div className="shadow-2xl fixed z-20 pt-6 pb-4 w-[100%]">
+      <div className="flex md:w-[80%] left-[10%] w-[90%] mx-auto justify-between">
         <span className="text-xl font-semibold">Mehdi Zarei</span>
         {/* desktop nav */}
         <nav className="hidden space-x-2 md:flex w-1/4 shadow-2xl ">
@@ -61,6 +61,6 @@ export const Header = () => {
           </a>
         </nav>
       </div>
-    </>
+    </div>
   );
 };
