@@ -1,4 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
+import { motion } from 'framer-motion';
 
 import { MyCarousel } from '../components/common/carousel';
 import { About } from '../container/homePage/About/About';
@@ -15,12 +16,23 @@ const Index = () => (
       render={() => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0, rotate: 90 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1 }}
+              className="section "
+            >
               <Banner />
-            </div>
-            <div className="section">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1 }}
+              className="section "
+            >
               <About />
-            </div>
+            </motion.div>
             <div className="section">
               <Skills />
             </div>
