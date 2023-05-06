@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import image1 from '../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg';
 
-const projects = () => {
+const Projects = () => {
   const array = [
     {
       title: 'All',
@@ -70,4 +70,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;

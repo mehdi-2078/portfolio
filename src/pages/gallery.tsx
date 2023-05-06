@@ -1,6 +1,6 @@
 import image1 from '../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg';
 
-const gallery = () => {
+const Gallery = () => {
   const array = [
     { title: 'All', id: 1 },
     { title: '2', id: 2 },
@@ -38,4 +38,4 @@ const gallery = () => {
   );
 };
 
-export default gallery;
+export default Gallery;
