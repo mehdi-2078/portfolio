@@ -19,6 +19,7 @@ const Index = () => (
             <motion.div
               initial={{ opacity: 0, scale: 0, rotate: 90 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 1 }}
               className="section "
             >
@@ -27,21 +28,39 @@ const Index = () => (
             <motion.div
               initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 1 }}
               className="section "
             >
               <About />
             </motion.div>
-            <div className="section">
+            <motion.div
+              initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="section "
+            >
               <Skills />
-            </div>
-            <div className="section">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="section "
+            >
               <MyCarousel />
-            </div>
-            <div className="section">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="section "
+            >
               <Gallery />
-            </div>
+            </motion.div>
           </ReactFullpage.Wrapper>
         );
       }}
