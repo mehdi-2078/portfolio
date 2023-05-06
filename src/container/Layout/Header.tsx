@@ -15,7 +15,7 @@ export const Header = () => {
       <div className="flex fixed z-20 md:w-[80%]  left-[10%] w-[90%] pt-6 mx-auto justify-between">
         <span className="text-xl font-semibold">Mehdi Zarei</span>
         {/* desktop nav */}
-        <nav className="hidden space-x-2 md:flex w-1/4 ">
+        <nav className="hidden space-x-2 md:flex w-1/4 shadow-2xl ">
           <a className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all">
             About
           </a>
