@@ -53,7 +53,6 @@ export function MyGallery() {
         watchSlidesProgress
         touchRatio={0.2}
         freeMode={true}
-        lazy={true}
         slideToClickedSlide={true}
         onSwiper={setThumbsSwiper}
         modules={[Navigation, FreeMode, Thumbs, Controller]}

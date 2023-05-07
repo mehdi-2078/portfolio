@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { motion } from 'framer-motion';
 import { BsTools, BsProjector } from 'react-icons/bs';
 import { MdMenu, MdClose, MdOutlineInfo, MdOutlinePermContactCalendar } from 'react-icons/md';
 
@@ -12,8 +13,15 @@ export const Header = () => {
 
   return (
     <div className="shadow-2xl fixed z-20 pt-6 pb-4 w-[100%]">
-      <div className="flex md:w-[80%] left-[10%] w-[90%] mx-auto justify-between">
-        <span className="text-xl font-semibold">Mehdi Zarei</span>
+      <div className="flex md:w-[80%] left-[10%] flex-wrap w-[90%] mx-auto justify-between">
+        <motion.div
+          className="bg-transparent  bg-gradient-to-r from-purple-800 to-pink-500 flex relative w-[50px] rounded-l-md"
+          initial={{ width: 30 }}
+          animate={{ width: 90 }}
+          transition={{ repeat: Infinity, repeatDelay: 1, duration: 2.5 }}
+        >
+          <p className="text-xl  font-semibold w-[150px] absolute pl-2">Mehdi Zarei</p>
+        </motion.div>
         {/* desktop nav */}
         <nav className="hidden space-x-2 md:flex w-1/4 shadow-2xl ">
           <a className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all">
