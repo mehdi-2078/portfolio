@@ -1,13 +1,12 @@
 import { useState } from 'react';
 
+import Image from 'next/image';
 // @ts-ignore
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { data } from '../../container/homePage/Skills/data';
-
-import Image from 'next/image';
 
 export const MyCarousel = () => {
   const [imgIndex, setImgIndex] = useState(0);

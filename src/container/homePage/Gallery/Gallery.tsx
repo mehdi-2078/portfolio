@@ -4,14 +4,12 @@ import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
-import NextJsImage from '../../../components/gallery/NextImage';
-
 import 'yet-another-react-lightbox/styles.css';
-
+import NextJsImage from '../../../components/gallery/NextImage';
 import { galleryPhotos } from '../../../components/gallery/Photos';
 
 export const Gallery = () => {
-  const [index, setIndex] = React.useState(-1);
+  const [myIndex, setIndex] = React.useState(-1);
   return (
     <div className="pt-32 w-10/12 mx-auto">
       <PhotoAlbum
@@ -26,8 +24,8 @@ export const Gallery = () => {
       />
       <Lightbox
         plugins={[Zoom]}
-        open={index >= 0}
-        index={index}
+        open={myIndex >= 0}
+        index={myIndex}
         close={() => setIndex(-1)}
         slides={galleryPhotos}
       />

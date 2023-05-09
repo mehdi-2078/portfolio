@@ -1,4 +1,4 @@
-import image1 from '../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg';
+// import image1 from '../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg';
 
 const Gallery = () => {
   const array = [
@@ -7,16 +7,15 @@ const Gallery = () => {
     { title: '3', id: 3 },
     { title: '4', id: 4 },
   ];
-  const array2 = [
-    {
-      title: 'project1',
-      image: require('../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg')
-        .default,
-    },
-    { title: 'project2', image: image1 },
-    { title: 'project3', image: image1 },
-  ];
-
+  // const array2 = [
+  //   {
+  //     title: 'project1',
+  //     image: require('../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg')
+  //       .default,
+  //   },
+  //   { title: 'project2', image: image1 },
+  //   { title: 'project3', image: image1 },
+  // ];
   return (
     <div className="h-[1000px] p-[100px]">
       <div className="w-[30%] justify-between mx-auto flex my-[60px]">
@@ -29,11 +28,7 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="w-[75%] mx-auto justify-between flex">
-        {array2.map((item, index) => (
-
-        ))}
-      </div>
+      <div className="w-[75%] mx-auto justify-between flex"></div>
     </div>
   );
 };

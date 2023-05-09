@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 import bootstrap from '../../../../public/assets/images/skills/bootstrap.png';
 import css from '../../../../public/assets/images/skills/css.png';
 import html from '../../../../public/assets/images/skills/html5.png';
@@ -6,7 +8,7 @@ import tailwind from '../../../../public/assets/images/skills/tailwind.png';
 
 interface Item {
   key: number;
-  src: string;
+  src: string | StaticImageData;
   title: string;
 }
 export const data: Item[] = [

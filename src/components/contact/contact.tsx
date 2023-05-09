@@ -1,22 +1,22 @@
-import { Formik, Form, Field, getIn } from 'formik';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as Yup from 'yup';
+import { Formik, Form, Field } from 'formik';
 
-export const getStyles = (errors, fieldName, touched) => {
-  if (getIn(errors, fieldName) && getIn(touched, fieldName)) {
-    return {
-      border: '1px solid red',
-    };
-  }
-};
+// export const getStyles = (errors: any, fieldName: string, touched: any) => {
+//   if (getIn(errors, fieldName) && getIn(touched, fieldName)) {
+//     return {
+//       border: '1px solid red',
+//     };
+//   }
+//   return null;
+// };
 export const Contact = () => {
-  const ContactSchema = Yup.object().shape({
-    name: Yup.string().min(3).max(10),
-    last_name: Yup.string().min(3).max(30),
-    phone_number: Yup.number().min(11).max(11).required('require'),
-    email: Yup.string().email(),
-    message: Yup.string().required('required'),
-  });
+  // const ContactSchema = Yup.object().shape({
+  //   name: Yup.string().min(3).max(10),
+  //   last_name: Yup.string().min(3).max(30),
+  //   phone_number: Yup.number().min(11).max(11).required('require'),
+  //   email: Yup.string().email(),
+  //   message: Yup.string().required('required'),
+  // });
+
   return (
     <div className="flex-col w-[80%] md:w-[80%] mx-auto flex md:flex-row ">
       <div className="w-full md:w-[50%] mb-20 md:mb-0">
@@ -32,17 +32,15 @@ export const Contact = () => {
           name: '',
           last_name: '',
           email: '',
-          phone_number: '',
+          phone_number: null,
           message: '',
         }}
-        validationSchema={ContactSchema}
+        // validationSchema={ContactSchema}
         onSubmit={(values, { resetForm }) => {
-          handleClick(values, resetForm);
+          console.log(values, resetForm);
         }}
       >
-        {({ errors, handleSubmit, touched }) => {
-          // eslint-disable-next-line no-console
-          console.log({ touched });
+        {({ errors, touched }) => {
           return (
             <Form>
               <div className="w-full">
@@ -53,7 +51,7 @@ export const Contact = () => {
                       placeholder="Name"
                       id="name"
                       className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
-                      style={getStyles(errors, 'name', touched)}
+                      // style={getStyles(errors, 'name', touched)}
                     />
                     {errors.name && touched.name ? (
                       <div className="block text-red-700 mt-2 font-[700]">{errors.name}</div>
@@ -65,7 +63,7 @@ export const Contact = () => {
                       placeholder="LastName"
                       id="last_name"
                       className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
-                      style={getStyles(errors, 'last_name', touched)}
+                      // style={getStyles(errors, 'last_name', touched)}
                     />
                     {errors.last_name && touched.last_name ? (
                       <div className="text-red-700 mt-2 font-[700]">{errors.last_name}</div>
@@ -79,7 +77,7 @@ export const Contact = () => {
                       placeholder="PhoneNumber"
                       id="phone_number"
                       className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
-                      style={getStyles(errors, 'phone_number', touched)}
+                      // style={getStyles(errors, 'phone_number', touched)}
                     />
                     {errors.phone_number && touched.phone_number ? (
                       <div className="block text-red-700 mt-2 font-[700]">
@@ -93,7 +91,7 @@ export const Contact = () => {
                       placeholder="Email"
                       id="email"
                       className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
-                      style={getStyles(errors, 'email', touched)}
+                      // style={getStyles(errors, 'email', touched)}
                     />
                     {errors.email && touched.email ? (
                       <div className="text-red-700 mt-2 font-[700]">{errors.email}</div>
@@ -106,7 +104,7 @@ export const Contact = () => {
                   placeholder="Message"
                   id="message"
                   className="pt-2 w-full rounded-md h-[150px] pl-4 text-white outline-none bg-[#643A6B] text-xl"
-                  style={getStyles(errors, 'message', touched)}
+                  // style={getStyles(errors, 'message', touched)}
                 />
                 {errors.message && touched.message ? (
                   <div className="text-red-700 mt-2 font-[700]">{errors.message}</div>

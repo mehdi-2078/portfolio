@@ -9,36 +9,36 @@ const Projects = () => {
   ];
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [index, setIndex] = React.useState('All');
+  // const [index, setIndex] = React.useState('All');
 
   return (
     <div className="h-[1000px] p-[100px]">
       <div className="w-[30%] justify-between mx-auto flex my-[60px]">
-        {array.map((item) => (
+        {array.map((item, index) => (
           <div
-            key={item.id}
-            onClick={() => setIndex(item.title)}
+            key={index}
+            // onClick={() => setIndex(item.title)}
             className="text-white cursor-pointer hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
           >
             {item.title}
           </div>
         ))}
       </div>
-      <div className="w-[75%] mx-auto justify-between flex">
-        {array.map((item) => {
-          item.title === index
-            ? item.items.map((i, index) => (
-                <div
-                  key={index}
-                  className="cursor-pointer relative w-[30%] h-[400px] overflow-hidden"
-                >
-                  <img src={i.image} alt="image" className="object-cover w-full h-full" />
-                  <div className="absolute left-7 bottom-8 text-3xl font-bold ">{i.title}</div>
-                </div>
-              ))
-            : null;
-        })}
-      </div>
+      {/* <div className="w-[75%] mx-auto justify-between flex"> */}
+      {/*  {array.map((item) => { */}
+      {/*    item.title === index */}
+      {/*      ? item.items.map((i, index) => ( */}
+      {/*          <div */}
+      {/*            key={index} */}
+      {/*            className="cursor-pointer relative w-[30%] h-[400px] overflow-hidden" */}
+      {/*          > */}
+      {/*            <img src={i.image} alt="image" className="object-cover w-full h-full" /> */}
+      {/*            <div className="absolute left-7 bottom-8 text-3xl font-bold ">{i.title}</div> */}
+      {/*          </div> */}
+      {/*        )) */}
+      {/*      : null; */}
+      {/*  })} */}
+      {/* </div> */}
     </div>
   );
 };

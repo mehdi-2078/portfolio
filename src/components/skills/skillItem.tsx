@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface Item {
   key: number;
-  src: string;
+  src: string | StaticImageData;
   title: string;
 }
 interface Props {
