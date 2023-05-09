@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { TitleReadMore } from './titleReadMore';
 import { data } from '../../container/homePage/Skills/data';
 
 import Image from 'next/image';
@@ -51,12 +52,8 @@ export const MyCarousel = () => {
   };
   return (
     <>
-      <div className="w-10/12 md:w-11/12 pb-8 mx-auto">
-        <div className="text-center mt-10 pt-2">
-          <span className="text-yellow-400 text-3xl text-center pb-2 border-b-gray-200 border-b-2 ">
-            My Projects
-          </span>
-        </div>
+      <div className="w-10/12 md:w-[80%] pb-8 pt-[80px] mx-auto">
+        <TitleReadMore text="My Projects" />
         <Slider {...settings}>
           {data.map((item, index) => (
             <div
