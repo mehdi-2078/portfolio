@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
+import NavLink from 'next/link';
 import { BsTools, BsProjector } from 'react-icons/bs';
 import { MdMenu, MdClose, MdOutlineInfo, MdOutlinePermContactCalendar } from 'react-icons/md';
 
@@ -12,7 +13,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="shadow-2xl fixed z-20 pt-6 pb-4 w-[100%]">
+    <div className="shadow-2xl bg-black/40 fixed z-20 pt-6 pb-4 w-[100%]">
       <div className="flex md:w-[80%] left-[10%] flex-wrap w-[90%] mx-auto justify-between">
         <motion.div
           className="bg-transparent  bg-gradient-to-r from-purple-800 to-pink-500 flex relative w-[50px] rounded-l-md"
@@ -24,9 +25,22 @@ export const Header = () => {
         </motion.div>
         {/* desktop nav */}
         <nav className="hidden space-x-2 md:flex w-1/4 shadow-2xl ">
-          <a className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all">
+          <NavLink
+            href="#home"
+            scroll={false}
+            // activeClassName="active"
+            className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            href="#about"
+            scroll={false}
+            // activeClassName="active"
+            className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
+          >
             About
-          </a>
+          </NavLink>
           <a className="text-md hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all">
             Skills
           </a>

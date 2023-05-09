@@ -4,38 +4,8 @@ import image1 from '../../public/assets/images/food/carissa-gan-LdfLThHJB7c-unsp
 
 const Projects = () => {
   const array = [
-    {
-      title: 'All',
-      id: 1,
-      items: [
-        { title: 'project2', image: image1 },
-        { title: 'project2', image: image1 },
-      ],
-    },
-    {
-      title: '2',
-      id: 2,
-      items: [
-        { title: 'project2', image: image1 },
-        { title: 'project2', image: image1 },
-      ],
-    },
-    {
-      title: '3',
-      id: 3,
-      items: [
-        { title: 'project2', image: image1 },
-        { title: 'project2', image: image1 },
-      ],
-    },
-    {
-      title: '4',
-      id: 4,
-      items: [
-        { title: 'project2', image: image1 },
-        { title: 'project2', image: image1 },
-      ],
-    },
+    { title: 'project2', image: image1 },
+    { title: 'project2', image: image1 },
   ];
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -55,16 +25,19 @@ const Projects = () => {
         ))}
       </div>
       <div className="w-[75%] mx-auto justify-between flex">
-        {array.map((item) =>
-        {item.title === index ?
-          ( item.items.map((i,index)=>(
-              <div key={index} className="cursor-pointer relative w-[30%] h-[400px] overflow-hidden">
-                <img src={i.image} alt="image" className="object-cover w-full h-full" />
-                <div className="absolute left-7 bottom-8 text-3xl font-bold ">{i.title}</div>
-              </div>
-            ))): null
-        }
-        )}
+        {array.map((item) => {
+          item.title === index
+            ? item.items.map((i, index) => (
+                <div
+                  key={index}
+                  className="cursor-pointer relative w-[30%] h-[400px] overflow-hidden"
+                >
+                  <img src={i.image} alt="image" className="object-cover w-full h-full" />
+                  <div className="absolute left-7 bottom-8 text-3xl font-bold ">{i.title}</div>
+                </div>
+              ))
+            : null;
+        })}
       </div>
     </div>
   );

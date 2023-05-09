@@ -5,13 +5,13 @@ import mehdi from '../../../../public/assets/images/mehdi8.png';
 
 export const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row md:w-[80%] w-[90%] mx-auto justify-center md:justify-between items-center">
+    <div className="flex mt-16 md:mt-0 overflow-hidden max-h-[92vh] flex-col md:flex-row md:w-[80%] w-[90%] mx-auto justify-center md:justify-between items-center">
       <motion.div className="flex flex-col items-center md:items-start">
         <motion.span
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-5xl text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-700 to-pink-300"
+          className=" text-4xl md:text-5xl text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-700 to-pink-300"
         >
           Hello i&apos;m
         </motion.span>
@@ -19,7 +19,8 @@ export const Banner = () => {
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.3 }}
-          className="text-6xl font-bold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+          className=" text-5xl md:text-6xl font-bold text-transparent text-8xl bg-clip-text bg-gradient-to-r
+          from-purple-400 to-pink-600"
         >
           Mehdi zarei
         </motion.span>
@@ -27,7 +28,7 @@ export const Banner = () => {
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="text-3xl mt-2 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-300 to-pink-200"
+          className="text-2xl md:text-3xl mt-2 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-300 to-pink-200"
         >
           React Developer
         </motion.span>
@@ -35,7 +36,7 @@ export const Banner = () => {
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="border text-xl border-white/70 rounded-lg mt-8 py-2 w-[140px] hover:bg-white/20 transition-all"
+          className="border text-lg md:text-xl border-white/70 rounded-lg mt-8 py-2 w-[120px]  hover:bg-white/20 transition-all"
         >
           More Info
         </motion.button>

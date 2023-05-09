@@ -24,13 +24,7 @@ const Index = () => {
                 d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
                 style={{ pathLength: scrollYProgress }}
               />
-              <motion.div
-                // initial={{ opacity: 0, scale: 0, rotate: 90 }}
-                // whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                // viewport={{ once: true }}
-                // transition={{ duration: 1 }}
-                className="section "
-              >
+              <motion.div className="section" id="home">
                 <Banner />
               </motion.div>
               <motion.div
@@ -39,6 +33,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="about"
               >
                 <About />
               </motion.div>
