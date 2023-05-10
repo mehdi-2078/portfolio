@@ -7,11 +7,13 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import NextJsImage from '../../../components/gallery/NextImage';
 import { galleryPhotos } from '../../../components/gallery/Photos';
+import { TitleReadMore } from '../../../components/common/titleReadMore';
 
 export const Gallery = () => {
   const [myIndex, setIndex] = React.useState(-1);
   return (
-    <div className="pt-32 w-10/12 mx-auto">
+    <div className="pt-[80px] w-10/12 mx-auto">
+      <TitleReadMore text="Galley" />
       <PhotoAlbum
         layout="masonry"
         photos={galleryPhotos}

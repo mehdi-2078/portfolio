@@ -2,9 +2,10 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import { motion, useScroll } from 'framer-motion';
 
 import { MyCarousel } from '../components/common/carousel';
-import { Contact } from '../components/contact/contact';
+import { Experiences } from '../components/experiences/experiences';
 import { About } from '../container/homePage/About/About';
 import { Banner } from '../container/homePage/Banner/Banner';
+import { Contact } from '../container/homePage/Contact/Contact';
 import { Gallery } from '../container/homePage/Gallery/Gallery';
 import { Skills } from '../container/homePage/Skills/Skills';
 
@@ -54,6 +55,15 @@ const Index = () => {
                 className="section "
               >
                 <MyCarousel />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="section "
+              >
+                <Experiences />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
