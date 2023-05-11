@@ -44,6 +44,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="skills"
               >
                 <Skills />
               </motion.div>
@@ -53,6 +54,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="projects"
               >
                 <MyCarousel />
               </motion.div>
@@ -62,6 +64,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="experience"
               >
                 <Experiences />
               </motion.div>
@@ -71,6 +74,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="gallery"
               >
                 <Gallery />
               </motion.div>
@@ -80,6 +84,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
                 className="section "
+                id="contact"
               >
                 <Contact />
               </motion.div>

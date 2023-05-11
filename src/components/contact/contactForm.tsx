@@ -1,46 +1,42 @@
 import { Formik, Form, Field } from 'formik';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as Yup from 'yup';
 
-// export const getStyles = (errors: any, fieldName: string, touched: any) => {
+// @ts-ignore
+// export const getStyles = (errors, fieldName, touched) => {
 //   if (getIn(errors, fieldName) && getIn(touched, fieldName)) {
 //     return {
 //       border: '1px solid red',
 //     };
 //   }
-//   return null;
 // };
-export const Contact = () => {
-  // const ContactSchema = Yup.object().shape({
-  //   name: Yup.string().min(3).max(10),
-  //   last_name: Yup.string().min(3).max(30),
-  //   phone_number: Yup.number().min(11).max(11).required('require'),
-  //   email: Yup.string().email(),
-  //   message: Yup.string().required('required'),
-  // });
-
+export const ContactForm = () => {
+  const ContactSchema = Yup.object().shape({
+    name: Yup.string().min(3).max(10),
+    last_name: Yup.string().min(3).max(30),
+    phone_number: Yup.number().min(11).max(11).required('require'),
+    email: Yup.string().email(),
+    message: Yup.string().required('required'),
+  });
   return (
-    <div className="flex-col w-[80%] md:w-[80%] mx-auto flex md:flex-row ">
-      <div className="w-full md:w-[50%] mb-20 md:mb-0">
-        <div className="mb-10 text-center md:text-start">
-          <span className="text-yellow-400 text-3xl text-center pb-2 border-b-gray-200 border-b-2 ">
-            contact me
-          </span>
-        </div>
-        <p>jhgbhjbhbhjbhj</p>
-      </div>
+    <div className=" w-full md:w-[50%]">
       <Formik
         initialValues={{
           name: '',
           last_name: '',
           email: '',
-          phone_number: null,
+          phone_number: '',
           message: '',
         }}
-        // validationSchema={ContactSchema}
-        onSubmit={(values, { resetForm }) => {
-          console.log(values, resetForm);
-        }}
+        validationSchema={ContactSchema}
+        // onSubmit={(values, { resetForm }) => {
+        //   handleClick(values, resetForm);
+        // }}
+        onSubmit={() => console.log('a')}
       >
         {({ errors, touched }) => {
+          // eslint-disable-next-line no-console
+          console.log({ touched });
           return (
             <Form>
               <div className="w-full">
@@ -54,7 +50,7 @@ export const Contact = () => {
                       // style={getStyles(errors, 'name', touched)}
                     />
                     {errors.name && touched.name ? (
-                      <div className="block text-red-700 mt-2 font-[700]">{errors.name}</div>
+                      <div className="block text-red-700 mt-0/5 font-[700]">{errors.name}</div>
                     ) : null}
                   </div>
                   <div className="w-full md:w-[49%]">
@@ -66,7 +62,7 @@ export const Contact = () => {
                       // style={getStyles(errors, 'last_name', touched)}
                     />
                     {errors.last_name && touched.last_name ? (
-                      <div className="text-red-700 mt-2 font-[700]">{errors.last_name}</div>
+                      <div className="text-red-700 mt-0/5 font-[700]">{errors.last_name}</div>
                     ) : null}
                   </div>
                 </div>
@@ -80,7 +76,7 @@ export const Contact = () => {
                       // style={getStyles(errors, 'phone_number', touched)}
                     />
                     {errors.phone_number && touched.phone_number ? (
-                      <div className="block text-red-700 mt-2 font-[700]">
+                      <div className="block text-red-700 mt-0/5 font-[700]">
                         {errors.phone_number}
                       </div>
                     ) : null}
@@ -94,7 +90,7 @@ export const Contact = () => {
                       // style={getStyles(errors, 'email', touched)}
                     />
                     {errors.email && touched.email ? (
-                      <div className="text-red-700 mt-2 font-[700]">{errors.email}</div>
+                      <div className="text-red-700 mt-0/5 font-[700]">{errors.email}</div>
                     ) : null}
                   </div>
                 </div>
@@ -103,11 +99,11 @@ export const Contact = () => {
                   name="message"
                   placeholder="Message"
                   id="message"
-                  className="pt-2 w-full rounded-md h-[150px] pl-4 text-white outline-none bg-[#643A6B] text-xl"
+                  className="pt-2 w-full rounded-md h-[200px] pl-4 text-white outline-none bg-[#643A6B] text-xl"
                   // style={getStyles(errors, 'message', touched)}
                 />
                 {errors.message && touched.message ? (
-                  <div className="text-red-700 mt-2 font-[700]">{errors.message}</div>
+                  <div className="text-red-700 mt-0/5 font-[700]">{errors.message}</div>
                 ) : null}
                 <div className="">
                   <button
