@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 // @ts-ignore
 import Slider from 'react-slick';
 
@@ -11,6 +12,7 @@ import { data } from '../../container/homePage/Skills/data';
 
 export const MyCarousel = () => {
   const [imgIndex, setImgIndex] = useState(0);
+  const router = useRouter();
 
   const settings = {
     dots: true,
@@ -52,16 +54,18 @@ export const MyCarousel = () => {
   return (
     <>
       <div className="w-10/12 md:w-[80%] pb-8 pt-[80px] mx-auto">
-        <TitleReadMore text="My Projects" />
+        <TitleReadMore text="My Index" link="projects" />
         <Slider {...settings}>
           {data.map((item, index) => (
             <div
+              onClick={() => router.push(`projects/${item.key}`)}
               key={index}
-              className={`!w-[70%] bg-white mx-auto text-center transition-transform duration-700 ${
-                index === imgIndex
-                  ? 'scale-x-[1.6] pb-20 pt-20 scale-y-[1.5] opacity-100'
-                  : 'scale-x-[1.1] pb-6 pt-8 scale-y-[1.1] opacity-40 '
-              }
+              className={`!w-[70%] cursor-pointer
+               bg-white mx-auto text-center transition-transform duration-700 ${
+                 index === imgIndex
+                   ? 'scale-x-[1.6] pb-20 pt-20 scale-y-[1.5] opacity-100'
+                   : 'scale-x-[1.1] pb-6 pt-8 scale-y-[1.1] opacity-40 '
+               }
               `}
             >
               <div

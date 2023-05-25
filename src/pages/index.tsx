@@ -15,8 +15,10 @@ const Index = () => {
   return (
     <>
       <ReactFullpage
+        navigation
         lazyLoading
         animateAnchor
+        // anchors={['home', 'about', 'skills', 'projects', 'experience', 'gallery', 'contact']}
         parallax
         render={() => {
           return (

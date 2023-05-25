@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
-import mehdi from '../../../../public/assets/images/mehdi8.png';
+import mehdi from '../../../../public/assets/images/mehdi13.jpg';
 
 export const About = () => {
   return (
     <div className="flex flex-col md:flex-row rounded-xl md:w-[84%] shadow-2xl overflow-hidden h-[700px] md:h-[500px] mt-10 w-[90%] mx-auto items-center">
-      <div className="w-[94%] md:w-[50%] hidden md:block mx-auto md:mx-0">
-        <Image className="bg-red-700 overflow-hidden " src={mehdi} alt="image" />
-      </div>
       <div
         className="bg-red-200 text-left px-5 h-[700px] md:h-[500px] text-black
       flex flex-col w-[94%] md:w-[50%] mx-auto md:mx-0 "
@@ -23,6 +20,9 @@ export const About = () => {
           ullam ad eligendi eum, et molestiae. Possimus porro adipisci reiciendis corrupti
           dignissimos fuga aliquam aperiam quisquam praesentium.
         </p>
+      </div>
+      <div className="w-[94%] md:w-[50%] hidden md:block mx-auto md:mx-0">
+        <Image className="bg-red-700 overflow-hidden " src={mehdi} alt="image" />
       </div>
     </div>
   );
