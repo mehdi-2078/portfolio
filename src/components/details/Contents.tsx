@@ -1,44 +1,42 @@
-export const Contents = () => {
+import { Project } from '../../pages/projects/types/Project';
+
+interface Props {
+  item: Project;
+}
+
+export const Contents = ({ item }: Props) => {
   return (
     <div className="flex flex-col">
       <div className="flex items-center text-4xl mt-4 font-semibold">
         👉
-        <h1 className="text-6xl mx-1 font-semibold">virdaar</h1>
+        <h1 className="text-6xl mx-1 font-semibold">{item.title}</h1>
         👈
       </div>
       <div className="text-[22px] mt-4">
         <span className="text-2xl">👩‍💼</span> <span>Employer:</span>&nbsp;
-        <span>Monir Company</span>
+        <span>{item.employer}</span>
       </div>
       <div className="text-[20px] mt-4">
         <span className="text-2xl">🤖</span> <span>Technology:</span>&nbsp;
-        <span>react& pure css</span>
+        <span>{item.technology}</span>
       </div>
       <div className="text-[17px] mt-4">
         <span className="text-2xl">📝</span> <span>Feature:</span>&nbsp;
-        <span>responsive & </span>
+        <span>{item.feature}</span>
       </div>
 
       <div className="text-[16px] mt-4">
         <span className="text-2xl">📜</span> <span>Description:</span>&nbsp;
-        <span className="">
-          {' '}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis deleniti,
-          deserunt ducimus illo inventore ipsam laudantium maiores maxime nihil provident quidem
-          ratione, reiciendis sit vitae. Accusantium asperiores necessitatibus vel. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis deleniti, deserunt
-          ducimus illo inventore ipsam laudantium maiores maxime nihil provident quidem ratione,
-          reiciendis sit vitae. Accusantium asperiores necessitatibus vel.
-        </span>
+        <span className=""> {item.description}</span>
       </div>
       <div className="text-[15px] my-4">
         <span className="text-2xl">🔭</span> <span>Live project:</span>&nbsp;
         <a
           title="Live project"
           className="text-blue-400 hover:border-b-2 hover:text-blue-300 "
-          href="#"
+          href={item.projectLink}
         >
-          Link{' '}
+          {item.projectLink}
         </a>
       </div>
       <hr />

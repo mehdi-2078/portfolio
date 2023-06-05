@@ -9,9 +9,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SwiperClass from 'swiper/types/swiper-class';
 
-import { photos } from './Photos';
+import { ProjectImages } from '../../pages/projects/types/Project';
 
-export function MyGallery() {
+interface Props {
+  items: ProjectImages[];
+}
+
+export function MyGallery({ items }: Props) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper] = useState<SwiperClass>();
   const [secondSwiper] = useState<SwiperClass>();
@@ -39,9 +43,15 @@ export function MyGallery() {
         modules={[FreeMode, Navigation, Thumbs, Controller]}
         className="h-[350px] md:h-[460px] w-[100%] rounded-xl"
       >
-        {photos.map((item, index) => (
-          <SwiperSlide key={index} className="">
-            <Image className="w-[100%] aspect-square" src={item.src} alt="" />
+        {items.map((item) => (
+          <SwiperSlide key={item._id} className="">
+            <Image
+              width={100}
+              height={100}
+              className="w-[100%] aspect-square"
+              src={`data:${item?.contentType};base64,${item?.data}`}
+              alt=""
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -58,9 +68,15 @@ export function MyGallery() {
         modules={[Navigation, FreeMode, Thumbs, Controller]}
         className="h-[100px] mx-auto flex justify-center !w-[100%] cursor-pointer mt-[20px] rounded-xl"
       >
-        {photos.map((item, index) => (
-          <SwiperSlide key={index} className="!w-[20%] swiper-slide-auto">
-            <Image className="rounded-xl h-[100px] " src={item.src} alt="" />
+        {items.map((item) => (
+          <SwiperSlide key={item._id} className="!w-[20%] swiper-slide-auto">
+            <Image
+              width={100}
+              height={100}
+              className="rounded-xl h-[100px] "
+              src={`data:${item?.contentType};base64,${item?.data}`}
+              alt=""
+            />
           </SwiperSlide>
         ))}
       </Swiper>

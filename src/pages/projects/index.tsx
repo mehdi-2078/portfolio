@@ -1,30 +1,36 @@
 import * as React from 'react';
 
+import type { GetStaticProps } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
-import { data } from '../../container/homePage/Skills/data';
+import { Project } from './types/Project';
 
-const Index = () => {
-  // const array = [
-  //   { title: 'project1', image: image1 },
-  //   { title: 'project2', image: image1 },
-  // ];
+interface Props {
+  resData: Project[];
+}
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  // const [index, setIndex] = React.useState('All');
+const Index = ({ resData }: Props) => {
+  const router = useRouter();
 
   return (
-    // <div className="h-[1000px] p-[100px]">
     <div className="pt-20">
       <div className="flex flex-wrap w-[80%] justify-between mx-auto  my-[60px]">
-        {data.map((item, index) => (
+        {resData.map((item, index) => (
           <div
-            key={item.key}
+            onClick={() => router.push(`projects/${item.title}`)}
+            key={item._id}
             className="flex m-4 justify-center items-center p-8 bg-black/5
            w-[30%] flex-col"
           >
-            <div className="">
-              <Image src={item.src} alt="" />
+            <div className="w-full h-full">
+              <Image
+                className="w-full h-full"
+                width={60}
+                height={60}
+                src={`data:${item?.images[0].contentType};base64,${item?.images[0]?.data}`}
+                alt=""
+              />
             </div>
             <div
               key={index}
@@ -53,6 +59,12 @@ const Index = () => {
       {/* </div> */}
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps<{}> = async () => {
+  const res = await fetch(`http://localhost:3000/project/allProject`);
+  const resData = await res.json();
+  return { props: { resData } };
 };
 
 export default Index;
