@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
 
 import mehdi from '../../../../public/assets/images/mehdi8.png';
 
@@ -15,7 +16,7 @@ export const Banner = () => {
         >
           Hello i&apos;m
         </motion.span>
-        <motion.span
+        <motion.h1
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.3 }}
@@ -23,14 +24,28 @@ export const Banner = () => {
           from-purple-400 to-pink-600"
         >
           Mehdi zarei
-        </motion.span>
+        </motion.h1>
         <motion.span
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
           className="text-2xl md:text-3xl mt-2 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-300 to-pink-200"
         >
-          React Developer
+          <TypeAnimation
+            sequence={[
+              'Mern stack ',
+              1000,
+              'React js',
+              1000,
+              'Next js',
+              1000,
+              'React native',
+              1000,
+              'Express js',
+              1000,
+            ]}
+            repeat={Infinity}
+          />
         </motion.span>
         <motion.button
           initial={{ x: '-100vw', opacity: 0 }}

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.39",
+    "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "formik": "^2.2.9",
@@ -37,6 +38,7 @@
     "react-icons": "^4.8.0",
     "react-photo-album": "^2.1.0",
     "react-slick": "^0.29.0",
+    "react-type-animation": "^3.0.1",
     "slick-carousel": "^1.8.1",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "swiper": "^9.2.4",

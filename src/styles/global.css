@@ -4,9 +4,12 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 body {
+  height: 100vh;
+
   font-family: Roboto, serif;
   color: #ffffff;
   background-image: linear-gradient(

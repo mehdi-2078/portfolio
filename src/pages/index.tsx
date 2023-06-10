@@ -1,24 +1,44 @@
+import React from 'react';
+
 import ReactFullpage from '@fullpage/react-fullpage';
 import { motion, useScroll } from 'framer-motion';
+import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 
-import { MyCarousel } from '../components/common/carousel';
-import { Experiences } from '../components/experiences/experiences';
-import { About } from '../container/homePage/About/About';
-import { Banner } from '../container/homePage/Banner/Banner';
-import { Contact } from '../container/homePage/Contact/Contact';
-import { Gallery } from '../container/homePage/Gallery/Gallery';
-import { Skills } from '../container/homePage/Skills/Skills';
+import { Project } from './projects/types/Project';
+import axiosInstance from '../../axios.config';
+import { MyCarousel } from '../components';
+import { homePageItems } from '../container/homePage/homePageItems';
 
-const Index = () => {
+interface Props {
+  resData: Project[];
+}
+
+const Index = ({ resData }: Props) => {
   const { scrollYProgress } = useScroll();
 
   return (
     <>
+      <NextSeo
+        title="مهدی زارعی | Mehdi Zarei"
+        description="وبسایت شخصی مهدی زارعی برنامه نویس | personal website Mehdi Zarei developer"
+        openGraph={{
+          url: 'https://mehdizarei2000.ir',
+          title: 'مهدی زارعی | Mehdi Zarei',
+          description:
+            'وبسایت شخصی مهدی زارعی برنامه نویس | personal website Mehdi Zarei developer',
+          images: [
+            {
+              url: '',
+              alt: 'Mehdi Zarei',
+            },
+          ],
+        }}
+      />
       <ReactFullpage
         navigation
         lazyLoading
         animateAnchor
-        // anchors={['home', 'about', 'skills', 'projects', 'experience', 'gallery', 'contact']}
         parallax
         render={() => {
           return (
@@ -27,69 +47,19 @@ const Index = () => {
                 d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
                 style={{ pathLength: scrollYProgress }}
               />
-              <motion.div className="section" id="home">
-                <Banner />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="about"
-              >
-                <About />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="skills"
-              >
-                <Skills />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="projects"
-              >
-                <MyCarousel />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="experience"
-              >
-                <Experiences />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="gallery"
-              >
-                <Gallery />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.5, scale: 0.2, rotate: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="section "
-                id="contact"
-              >
-                <Contact />
-              </motion.div>
+              {homePageItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0.5, rotate: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                  className="section"
+                  id={item.id}
+                >
+                  {item.id !== 'projects' ? item.component : <MyCarousel items={resData} />}
+                </motion.div>
+              ))}
             </ReactFullpage.Wrapper>
           );
         }}
@@ -99,4 +69,11 @@ const Index = () => {
     </>
   );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await axiosInstance.get(`project/allProject`);
+  const resData = response.data;
+  return { props: { resData } };
+};
+
 export default Index;

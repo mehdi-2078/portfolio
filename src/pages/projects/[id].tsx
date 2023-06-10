@@ -1,6 +1,8 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+
 import { Project } from './types/Project';
-import { Contents } from '../../components/details/Contents';
-import { MyGallery } from '../../components/details/Gallery';
+import axiosInstance from '../../../axios.config';
+import { Contents, MyGallery } from '../../components';
 
 interface Props {
   resData: Project;
@@ -21,23 +23,23 @@ const Id = ({ resData }: Props) => {
   );
 };
 
-export async function getStaticPaths() {
-  const res = await fetch('http://localhost:3000/project/allProject');
-  const resData = await res.json();
-  const paths = resData.map((item: object) => ({ params: { id: item.title } }));
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await axiosInstance.get(`project/allProject`);
+  const resData = response.data;
+
+  const paths = resData.map((item: Project) => ({ params: { id: item.title } }));
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   // اینجا جزئیات محصول مورد نظر را بر اساس پارامتر ارسالی از API دریافت می‌کنیم
-  const res = await fetch(`http://localhost:3000/project/allProject/${params.id}`);
-  const resData = await res.json();
-
+  const response = await axiosInstance.get(`project/allProject/${params?.id}`);
+  const resData = response.data;
   // بازگرداندن جزئیات محصول به عنوان props
   return { props: { resData } };
-}
+};
 
 export default Id;

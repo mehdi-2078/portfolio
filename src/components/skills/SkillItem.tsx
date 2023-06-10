@@ -11,7 +11,7 @@ interface Props {
   items: Item[];
 }
 
-export const SkillItem: React.FC<Props> = ({ items }) => {
+export const SkillItem = ({ items }: Props) => {
   return (
     <>
       {items.map((item) => (

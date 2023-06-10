@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
 
-export default function NextJsImage({
+export const NextJsImage = ({
   photo,
   imageProps: { alt, title, sizes, className, onClick },
   wrapperStyle,
-}: RenderPhotoProps) {
+}: RenderPhotoProps) => {
   return (
     <div style={{ ...wrapperStyle }}>
       <Image
@@ -15,4 +15,4 @@ export default function NextJsImage({
       />
     </div>
   );
-}
+};

@@ -1,6 +1,5 @@
 import { data } from './data';
-import { Title } from '../../../components/common/title';
-import { SkillItem } from '../../../components/skills/skillItem';
+import { Title, SkillItem } from '../../../components';
 
 export const Skills = () => {
   return (

@@ -16,6 +16,7 @@ interface Props {
 }
 
 export function MyGallery({ items }: Props) {
+  console.log({ items });
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper] = useState<SwiperClass>();
   const [secondSwiper] = useState<SwiperClass>();

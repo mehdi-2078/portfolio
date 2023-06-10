@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { BsDownload } from 'react-icons/Bs';
 
 import mehdi from '../../../../public/assets/images/mehdi13.jpg';
 
@@ -20,6 +21,13 @@ export const About = () => {
           ullam ad eligendi eum, et molestiae. Possimus porro adipisci reiciendis corrupti
           dignissimos fuga aliquam aperiam quisquam praesentium.
         </p>
+        <div
+          className="flex w-fit px-4 py-2 mt-auto mb-8 bg-red-400/50 hover:bg-yellow-600
+        items-center justify-center rounded cursor-pointer"
+        >
+          <button className=" mr-2"> Download CV</button>
+          <BsDownload size={20} />
+        </div>
       </div>
       <div className="w-[94%] md:w-[50%] hidden md:block mx-auto md:mx-0">
         <Image className="bg-red-700 overflow-hidden " src={mehdi} alt="image" />

@@ -2,6 +2,8 @@ import { Formik, Form, Field } from 'formik';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as Yup from 'yup';
 
+import axiosInstance from '../../../axios.config';
+
 // @ts-ignore
 // export const getStyles = (errors, fieldName, touched) => {
 //   if (getIn(errors, fieldName) && getIn(touched, fieldName)) {
@@ -11,30 +13,42 @@ import * as Yup from 'yup';
 //   }
 // };
 export const ContactForm = () => {
+  const phoneRegExp = /^(\+98?)?{?(0?9[0-9]{9}}?)$/;
+
   const ContactSchema = Yup.object().shape({
-    name: Yup.string().min(3).max(10),
-    last_name: Yup.string().min(3).max(30),
-    phone_number: Yup.number().min(11).max(11).required('require'),
+    firstName: Yup.string().min(3).max(10),
+    lastName: Yup.string().min(3).max(30),
+    phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
     email: Yup.string().email(),
     message: Yup.string().required('required'),
   });
+  // @ts-ignore
+  const handleForm = (value, resetForm) => {
+    console.log(value);
+    axiosInstance
+      .post('contactMe', value)
+      .then(() => {
+        alert('success');
+        resetForm();
+      })
+      .catch((err) => console.log('error:', err));
+  };
   return (
     <div className=" w-full md:w-[50%]">
       <Formik
         initialValues={{
-          name: '',
-          last_name: '',
+          firstName: '',
+          lastName: '',
           email: '',
-          phone_number: '',
+          phone: '',
           message: '',
         }}
         validationSchema={ContactSchema}
-        // onSubmit={(values, { resetForm }) => {
-        //   handleClick(values, resetForm);
-        // }}
-        onSubmit={() => console.log('a')}
+        onSubmit={(values, { resetForm }) => {
+          handleForm(values, resetForm);
+        }}
       >
-        {({ errors, touched }) => {
+        {({ errors, touched, handleSubmit }) => {
           // eslint-disable-next-line no-console
           console.log({ touched });
           return (
@@ -43,42 +57,40 @@ export const ContactForm = () => {
                 <div className="md:flex md:justify-between md:mb-4 w-full">
                   <div className="w-full md:w-[49%]">
                     <Field
-                      name="name"
-                      placeholder="Name"
-                      id="name"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
+                      name="firstName"
+                      placeholder="firstName"
+                      id="firstName"
+                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'name', touched)}
                     />
-                    {errors.name && touched.name ? (
-                      <div className="block text-red-700 mt-0/5 font-[700]">{errors.name}</div>
+                    {errors.firstName && touched.firstName ? (
+                      <div className="block text-red-700 mt-0/5 font-[700]">{errors.firstName}</div>
                     ) : null}
                   </div>
                   <div className="w-full md:w-[49%]">
                     <Field
-                      name="last_name"
-                      placeholder="LastName"
-                      id="last_name"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
+                      name="lastName"
+                      placeholder="lastName"
+                      id="lastName"
+                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'last_name', touched)}
                     />
-                    {errors.last_name && touched.last_name ? (
-                      <div className="text-red-700 mt-0/5 font-[700]">{errors.last_name}</div>
+                    {errors.lastName && touched.lastName ? (
+                      <div className="text-red-700 mt-0/5 font-[700]">{errors.lastName}</div>
                     ) : null}
                   </div>
                 </div>
                 <div className="md:flex md:justify-between md:mb-4">
                   <div className="w-full md:w-[49%]">
                     <Field
-                      name="phone_number"
-                      placeholder="PhoneNumber"
-                      id="phone_number"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
+                      name="phone"
+                      placeholder="phone"
+                      id="phone"
+                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'phone_number', touched)}
                     />
-                    {errors.phone_number && touched.phone_number ? (
-                      <div className="block text-red-700 mt-0/5 font-[700]">
-                        {errors.phone_number}
-                      </div>
+                    {errors.phone && touched.phone ? (
+                      <div className="block text-red-700 mt-0/5 font-[700]">{errors.phone}</div>
                     ) : null}
                   </div>
                   <div className="w-full md:w-[49%]">
@@ -86,7 +98,7 @@ export const ContactForm = () => {
                       name="email"
                       placeholder="Email"
                       id="email"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-[#643A6B] text-xl "
+                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'email', touched)}
                     />
                     {errors.email && touched.email ? (
@@ -99,19 +111,20 @@ export const ContactForm = () => {
                   name="message"
                   placeholder="Message"
                   id="message"
-                  className="pt-2 w-full rounded-md h-[200px] pl-4 text-white outline-none bg-[#643A6B] text-xl"
+                  className="pt-2 w-full rounded-md h-[200px] pl-4 text-white outline-none bg-gray-700 text-xl"
                   // style={getStyles(errors, 'message', touched)}
                 />
                 {errors.message && touched.message ? (
                   <div className="text-red-700 mt-0/5 font-[700]">{errors.message}</div>
                 ) : null}
-                <div className="">
+                <div className="text-center">
                   <button
                     type="button"
-                    // onClick={handleSubmit}
-                    className="py-2 px-6 mt-2 rounded-md bg-[#E5BEEC] hover:bg-[#917FB3] hover:text-white text-black"
+                    onClick={handleSubmit}
+                    className="w-full cursor-pointer py-3 mt-4 rounded-md
+                    bg-gray-500 hover:bg-[#917FB3] hover:text-white text-black"
                   >
-                    Submit
+                    Send message
                   </button>
                 </div>
               </div>

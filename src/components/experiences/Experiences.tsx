@@ -1,4 +1,4 @@
-import { Title } from '../common/title';
+import { Title } from '../common/Title';
 
 export const Experiences = () => {
   return (
@@ -7,7 +7,7 @@ export const Experiences = () => {
       <div className="container mx-auto flex flex-col items-center justify-center md:flex-row my-8">
         <div className="ml-0 sticky">
           <div className="container mx-auto w-full h-full">
-            <div className="relative wrap overflow-hidden p-10 h-full">
+            <div className="relative wrap overflow-hidden p-0 md:p-10 h-full">
               <div
                 className="border-2-2 right-[50%] border-[#FFC100] absolute h-full border"
                 // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"

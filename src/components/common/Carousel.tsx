@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -7,12 +7,16 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { TitleReadMore } from './titleReadMore';
-import { data } from '../../container/homePage/Skills/data';
+import { TitleReadMore } from './TitleReadMore';
+import { Project } from '../../pages/projects/types/Project';
 
-export const MyCarousel = () => {
+interface Props {
+  items: Project[];
+}
+export const MyCarousel = ({ items }: Props): ReactElement => {
   const [imgIndex, setImgIndex] = useState(0);
   const router = useRouter();
+  console.log({ items });
 
   const settings = {
     dots: true,
@@ -20,7 +24,7 @@ export const MyCarousel = () => {
     lazyLoad: true,
     speed: 500,
     className: 'py-10 mt-10',
-    slidesToShow: 5,
+    // slidesToShow: 5,
     centerMode: true,
     // @ts-ignore
     beforeChange: (current, next) => setImgIndex(next),
@@ -54,11 +58,11 @@ export const MyCarousel = () => {
   return (
     <>
       <div className="w-10/12 md:w-[80%] pb-8 pt-[80px] mx-auto">
-        <TitleReadMore text="My Index" link="projects" />
+        <TitleReadMore text="projects " link="projects" />
         <Slider {...settings}>
-          {data.map((item, index) => (
+          {items.map((item, index) => (
             <div
-              onClick={() => router.push(`projects/${item.key}`)}
+              onClick={() => router.push(`projects/${item.title}`)}
               key={index}
               className={`!w-[70%] cursor-pointer
                bg-white mx-auto text-center transition-transform duration-700 ${
@@ -72,9 +76,15 @@ export const MyCarousel = () => {
                 className="px-10 border-red-600 w-[90%] rounded-xl bg-red-100 h-[180px]
                flex justify-center items-center mx-auto"
               >
-                <Image src={item.src} alt="gg" />
+                <Image
+                  className="w-full h-full"
+                  width={100}
+                  height={100}
+                  src={`data:${item?.images[0].contentType};base64,${item?.images[0].data}`}
+                  alt="image"
+                />
               </div>
-              <p className="text-black font-medium mt-1">portfolio</p>
+              <p className="text-black font-medium mt-1">{item.title}</p>
               <div className="text-black flex justify-between mx-4 mt-3 text-xs">
                 <span>1402</span>
                 <span>more</span>

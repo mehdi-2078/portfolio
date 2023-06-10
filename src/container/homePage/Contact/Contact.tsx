@@ -1,5 +1,4 @@
-import { ContactForm } from '../../../components/contact/contactForm';
-import { ContactInfo } from '../../../components/contact/contactInfo';
+import { ContactForm, ContactInfo } from '../../../components';
 
 export const Contact = () => {
   return (

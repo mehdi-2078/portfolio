@@ -8,12 +8,14 @@ export interface Project {
   projectLink: string;
   images: [
     {
+      _id: string;
       contentType: string;
       data: string;
     }
   ];
 }
 export interface ProjectImages {
+  _id: string;
   contentType: string;
   data: string;
 }

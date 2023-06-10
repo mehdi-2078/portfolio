@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { Project } from './types/Project';
+import axiosInstance from '../../../axios.config';
 
 interface Props {
   resData: Project[];
@@ -61,9 +62,10 @@ const Index = ({ resData }: Props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<{}> = async () => {
-  const res = await fetch(`http://localhost:3000/project/allProject`);
-  const resData = await res.json();
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await axiosInstance.get(`project/allProject`);
+  const resData = response.data;
+
   return { props: { resData } };
 };
 
