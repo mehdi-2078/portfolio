@@ -8,7 +8,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    console.log('t', this.props.locale);
     return (
       <Html dir={this.props.locale === 'fa' ? 'rtl' : 'ltr'} lang={this.props.locale}>
         <Head />

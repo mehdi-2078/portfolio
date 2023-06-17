@@ -8,15 +8,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { TitleReadMore } from './TitleReadMore';
-import { Project } from '../../pages/projects/types/Project';
+import { Project } from '../Projects/types/Project';
 
-interface Props {
+type CarouselProps = {
   items: Project[];
-}
-export const MyCarousel = ({ items }: Props): ReactElement => {
+};
+export const MyCarousel = ({ items }: CarouselProps): ReactElement => {
   const [imgIndex, setImgIndex] = useState(0);
   const router = useRouter();
-  console.log({ items });
 
   const settings = {
     dots: true,
@@ -78,8 +77,8 @@ export const MyCarousel = ({ items }: Props): ReactElement => {
               >
                 <Image
                   className="w-full h-full"
-                  width={100}
-                  height={100}
+                  width={380}
+                  height={474}
                   src={`data:${item?.images[0].contentType};base64,${item?.images[0].data}`}
                   alt="image"
                 />

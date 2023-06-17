@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SwiperClass from 'swiper/types/swiper-class';
 
-import { ProjectImages } from '../../pages/projects/types/Project';
+import { ProjectImages } from '../Projects/types/Project';
 
 interface Props {
   items: ProjectImages[];

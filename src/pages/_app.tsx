@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
 
 import '../styles/global.css';
-import { Layout } from '../container/Layout/Layout';
+import { Layout } from '../container';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta charSet="utf-8" />
       <meta name="description" content="mehdi-zarei" />
       <meta name="theme-color" content="#fff" />
-      <title>Dermistech</title>
+      <title>mehdi zarei</title>
     </Head>
     <Layout>
       <NextNProgress />

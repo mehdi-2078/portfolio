@@ -2,12 +2,12 @@ import React from 'react';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import { motion, useScroll } from 'framer-motion';
-import { GetStaticProps } from 'next';
+// import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 
-import { Project } from './projects/types/Project';
-import axiosInstance from '../../axios.config';
+// import axiosInstance from '../../axios.config';
 import { MyCarousel } from '../components';
+import { Project } from '../components/Projects/types/Project';
 import { homePageItems } from '../container/homePage/homePageItems';
 
 interface Props {
@@ -27,12 +27,14 @@ const Index = ({ resData }: Props) => {
           title: 'مهدی زارعی | Mehdi Zarei',
           description:
             'وبسایت شخصی مهدی زارعی برنامه نویس | personal website Mehdi Zarei developer',
-          images: [
-            {
-              url: '',
-              alt: 'Mehdi Zarei',
-            },
-          ],
+          // images: [
+          //   {
+          //     width: 800,
+          //     height: 600,
+          //     url: '',
+          //     alt: 'Mehdi Zarei',
+          //   },
+          // ],
         }}
       />
       <ReactFullpage
@@ -53,7 +55,7 @@ const Index = ({ resData }: Props) => {
                   initial={{ opacity: 0.5, rotate: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.5 }}
                   className="section"
                   id={item.id}
                 >
@@ -69,11 +71,11 @@ const Index = ({ resData }: Props) => {
     </>
   );
 };
-
-export const getStaticProps: GetStaticProps = async () => {
-  const response = await axiosInstance.get(`project/allProject`);
-  const resData = response.data;
-  return { props: { resData } };
-};
+//
+// export const getStaticProps: GetStaticProps = async () => {
+//   const response = await axiosInstance.get(`project/allProject`);
+//   const resData = response.data;
+//   return { props: { resData } };
+// };
 
 export default Index;

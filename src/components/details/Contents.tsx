@@ -1,4 +1,4 @@
-import { Project } from '../../pages/projects/types/Project';
+import { Project } from '../Projects/types/Project';
 
 interface Props {
   item: Project;

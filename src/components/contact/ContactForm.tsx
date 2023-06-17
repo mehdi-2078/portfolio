@@ -34,7 +34,7 @@ export const ContactForm = () => {
       .catch((err) => console.log('error:', err));
   };
   return (
-    <div className=" w-full md:w-[50%]">
+    <div className=" w-full py-14 md:w-[50%]">
       <Formik
         initialValues={{
           firstName: '',
@@ -60,7 +60,7 @@ export const ContactForm = () => {
                       name="firstName"
                       placeholder="firstName"
                       id="firstName"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
+                      className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'name', touched)}
                     />
                     {errors.firstName && touched.firstName ? (
@@ -72,7 +72,7 @@ export const ContactForm = () => {
                       name="lastName"
                       placeholder="lastName"
                       id="lastName"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
+                      className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'last_name', touched)}
                     />
                     {errors.lastName && touched.lastName ? (
@@ -86,7 +86,7 @@ export const ContactForm = () => {
                       name="phone"
                       placeholder="phone"
                       id="phone"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
+                      className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'phone_number', touched)}
                     />
                     {errors.phone && touched.phone ? (
@@ -98,7 +98,8 @@ export const ContactForm = () => {
                       name="email"
                       placeholder="Email"
                       id="email"
-                      className="mb-4 md:mb-0 w-full py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
+                      className="mb-4 md:mb-0 w-full py-[5px] md:py-[14px] rounded-md pl-4
+                      text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'email', touched)}
                     />
                     {errors.email && touched.email ? (
@@ -120,7 +121,7 @@ export const ContactForm = () => {
                 <div className="text-center">
                   <button
                     type="button"
-                    onClick={handleSubmit}
+                    onClick={() => handleSubmit()}
                     className="w-full cursor-pointer py-3 mt-4 rounded-md
                     bg-gray-500 hover:bg-[#917FB3] hover:text-white text-black"
                   >

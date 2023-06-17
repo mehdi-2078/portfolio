@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Footer, Header } from '../index';
+import { Header } from '../index';
 
 type Props = {
   children?: React.ReactNode;
@@ -10,7 +10,7 @@ export function Layout(props: Props) {
     <>
       <Header />
       {props.children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

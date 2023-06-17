@@ -2,14 +2,14 @@ import React from 'react';
 
 import Image, { StaticImageData } from 'next/image';
 
-interface Item {
+type Item = {
   key: string;
   src: string | StaticImageData;
   title: string;
-}
-interface Props {
+};
+type Props = {
   items: Item[];
-}
+};
 
 export const SkillItem = ({ items }: Props) => {
   return (

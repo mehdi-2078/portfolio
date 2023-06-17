@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import type { GetStaticProps } from 'next';
+import type { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import { Project } from './types/Project';
 import axiosInstance from '../../../axios.config';
+import { Project } from '../../components/Projects/types/Project';
 
 interface Props {
   resData: Project[];
@@ -16,13 +16,13 @@ const Index = ({ resData }: Props) => {
 
   return (
     <div className="pt-20">
-      <div className="flex flex-wrap w-[80%] justify-between mx-auto  my-[60px]">
+      <div className="flex flex-wrap w-[94%] md:w-[80%] justify-between mx-auto  my-[60px]">
         {resData.map((item, index) => (
           <div
             onClick={() => router.push(`projects/${item.title}`)}
             key={item._id}
-            className="flex m-4 justify-center items-center p-8 bg-black/5
-           w-[30%] flex-col"
+            className="flex cursor-pointer m-4 justify-center items-center p-3 md:p-8  bg-black/5
+          w-[45%] md:w-[30%] flex-col"
           >
             <div className="w-full h-full">
               <Image
@@ -36,7 +36,7 @@ const Index = ({ resData }: Props) => {
             <div
               key={index}
               // onClick={() => setIndex(item.title)}
-              className="text-white mt-4 text-2xl cursor-pointer hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
+              className="text-white mt-4 text-2xl hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
             >
               {item.title}
             </div>
@@ -62,7 +62,7 @@ const Index = ({ resData }: Props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const response = await axiosInstance.get(`project/allProject`);
   const resData = response.data;
 
