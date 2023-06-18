@@ -43,21 +43,6 @@ const Index = ({ resData }: Props) => {
           </div>
         ))}
       </div>
-      {/* <div className="w-[75%] mx-auto justify-between flex"> */}
-      {/*  {array.map((item) => { */}
-      {/*    item.title === index */}
-      {/*      ? item.items.map((i, index) => ( */}
-      {/*          <div */}
-      {/*            key={index} */}
-      {/*            className="cursor-pointer relative w-[30%] h-[400px] overflow-hidden" */}
-      {/*          > */}
-      {/*            <img src={i.image} alt="image" className="object-cover w-full h-full" /> */}
-      {/*            <div className="absolute left-7 bottom-8 text-3xl font-bold ">{i.title}</div> */}
-      {/*          </div> */}
-      {/*        )) */}
-      {/*      : null; */}
-      {/*  })} */}
-      {/* </div> */}
     </div>
   );
 };
@@ -65,7 +50,6 @@ const Index = ({ resData }: Props) => {
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await axiosInstance.get(`project/allProject`);
   const resData = response.data;
-
   return { props: { resData } };
 };
 

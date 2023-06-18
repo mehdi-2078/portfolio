@@ -7,14 +7,13 @@ interface NavBarItem {
   title: string;
   href: string;
   icon: React.ReactElement;
-  size: number;
 }
 export const NavBarItems: NavBarItem[] = [
-  { title: 'banner', href: 'banner', icon: <MdOutlineInfo />, size: 20 },
-  { title: 'about', href: 'about', icon: <MdOutlineInfo />, size: 20 },
-  { title: 'skills', href: 'skills', icon: <BsTools />, size: 20 },
-  { title: 'projects', href: 'projects', icon: <BsProjector />, size: 20 },
-  { title: 'experience', href: 'experience', icon: <MdOutlineInfo />, size: 20 },
-  // { title: 'gallery', href: 'gallery', icon: <MdOutlineInfo />, size: 20 },
-  { title: 'contactMe', href: 'contactMe', icon: <MdOutlinePermContactCalendar />, size: 20 },
+  { title: 'home', href: 'home', icon: <MdOutlineInfo /> },
+  { title: 'about', href: 'about', icon: <MdOutlineInfo /> },
+  { title: 'skills', href: 'skills', icon: <BsTools /> },
+  { title: 'projects', href: 'projects', icon: <BsProjector /> },
+  { title: 'experience', href: 'experience', icon: <MdOutlineInfo /> },
+  // { title: 'gallery', href: 'gallery', icon: <MdOutlineInfo />},
+  { title: 'contactMe', href: 'contactMe', icon: <MdOutlinePermContactCalendar /> },
 ];

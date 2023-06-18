@@ -3,9 +3,11 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { motion, useScroll } from 'framer-motion';
 // import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
 
 // import axiosInstance from '../../axios.config';
+import axiosInstance from '../../axios.config';
 import { MyCarousel } from '../components';
 import { Project } from '../components/Projects/types/Project';
 import { homePageItems } from '../container/homePage/homePageItems';
@@ -52,10 +54,10 @@ const Index = ({ resData }: Props) => {
               {homePageItems.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0.5, rotate: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                  // initial={{ opacity: 0.5, rotate: 0 }}
+                  // whileInView={{ opacity: 1 }}
+                  // viewport={{ once: true }}
+                  // transition={{ duration: 0.5 }}
                   className="section"
                   id={item.id}
                 >
@@ -77,5 +79,10 @@ const Index = ({ resData }: Props) => {
 //   const resData = response.data;
 //   return { props: { resData } };
 // };
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await axiosInstance.get(`project/allProject`);
+  const resData = response.data;
+  return { props: { resData } };
+};
 
 export default Index;

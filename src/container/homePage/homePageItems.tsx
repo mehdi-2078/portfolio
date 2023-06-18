@@ -8,10 +8,10 @@ interface HomePageItem {
   component?: React.ReactElement;
 }
 export const homePageItems: HomePageItem[] = [
-  { id: 'banner', component: <Banner /> },
+  { id: 'home', component: <Banner /> },
   { id: 'about', component: <About /> },
   { id: 'skills', component: <Skills /> },
-  // { id: 'projects' },
+  { id: 'projects' },
   { id: 'experiences ', component: <Experiences /> },
   // { id: 'gallery', component: <Gallery /> },
   { id: 'contactMe', component: <Contact /> },
