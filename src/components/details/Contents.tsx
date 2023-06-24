@@ -7,10 +7,9 @@ interface Props {
 export const Contents = ({ item }: Props) => {
   return (
     <div className="flex flex-col">
-      <div className="flex items-center text-4xl mt-4 font-semibold">
+      <div className="flex items-center text-2xl mt-4 font-semibold">
         👉
-        <h1 className="text-6xl mx-1 font-semibold">{item.title}</h1>
-        👈
+        <h1 className="text-[28px] mx-1 font-semibold">{item.title}</h1>
       </div>
       <div className="text-[22px] mt-4">
         <span className="text-2xl">👩‍💼</span> <span>Employer:</span>&nbsp;
@@ -20,7 +19,7 @@ export const Contents = ({ item }: Props) => {
         <span className="text-2xl">🤖</span> <span>Technology:</span>&nbsp;
         <span>{item.technology}</span>
       </div>
-      <div className="text-[17px] mt-4">
+      <div className="text-[18px] mt-4">
         <span className="text-2xl">📝</span> <span>Feature:</span>&nbsp;
         <span>{item.feature}</span>
       </div>

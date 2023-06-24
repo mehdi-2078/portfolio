@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { Experiences } from '../../components/experiences/Experiences';
-import { About, Banner, Contact, Skills } from '../index';
+import { About, Banner, Contact, Experiences, Skills } from '../index';
 
-interface HomePageItem {
+type HomePageItem = {
   id: string;
   component?: React.ReactElement;
-}
+};
 export const homePageItems: HomePageItem[] = [
   { id: 'home', component: <Banner /> },
   { id: 'about', component: <About /> },

@@ -13,7 +13,7 @@ export const NavBarItems: NavBarItem[] = [
   { title: 'about', href: 'about', icon: <MdOutlineInfo /> },
   { title: 'skills', href: 'skills', icon: <BsTools /> },
   { title: 'projects', href: 'projects', icon: <BsProjector /> },
-  { title: 'experience', href: 'experience', icon: <MdOutlineInfo /> },
+  { title: 'experiences', href: 'experiences', icon: <MdOutlineInfo /> },
   // { title: 'gallery', href: 'gallery', icon: <MdOutlineInfo />},
   { title: 'contactMe', href: 'contactMe', icon: <MdOutlinePermContactCalendar /> },
 ];

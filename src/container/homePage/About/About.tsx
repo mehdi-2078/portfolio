@@ -7,22 +7,19 @@ export const About = () => {
   return (
     <div
       className="flex flex-col md:flex-row rounded-xl md:w-[84%] shadow-2xl overflow-hidden
-     h-[650px] md:h-[550px] mt-10 w-[98%] mx-auto items-center"
+     h-[550px] md:h-[500px] mt-10 w-[98%] mx-auto items-center"
     >
       <div
-        className="bg-red-200 text-left px-5 h-[650px] md:h-[550px] text-black
+        className="bg-red-200 text-left px-5 h-[550px] md:h-[500px] text-black
       flex flex-col w-[94%] md:w-[50%] mx-auto md:mx-0 "
       >
-        <div className="font-bold text-2xl mt-3">A bit about me!</div>
-        <p className="mt-5 text-md line">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum exercitationem voluptate
-          sapiente necessitatibus rerum voluptates accusamus tenetur, eaque natus possimus aut magni
-          odio saepe eligendi laudantium. Enim, illo quod. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Sed quis, vitae ea repellendus pariatur nihil ad cupiditate minima et
-          quasi laborum. Amet eius, aliquam impedit modi tempore doloribus iusto. Nobis nam, unde
-          officia iusto repellat obcaecati temporibus recusandae corrupti odit voluptatem dolor est
-          ullam ad eligendi eum, et molestiae. Possimus porro adipisci reiciendis corrupti
-          dignissimos fuga aliquam aperiam quisquam praesentium.
+        <div className="font-bold text-2xl mt-6">A bit about me!</div>
+        <p className="mt-5 text-[18px] line">
+          I have been working in front-end programming since 2019. During this time, I created
+          different websites for online stores, real estate, skin analysis, financial services, etc.
+          I worked with several companies and held several classes at Lorestan University in the
+          field of the front-end as an instructor. I am enthusiastic‏ about programming and I like
+          to learn about new technologies. I am best known for being creative among my colleagues.{' '}
         </p>
         <div
           className="flex w-fit px-4 py-2 mt-auto mb-4 md:mb-8 bg-red-400/50 hover:bg-yellow-600

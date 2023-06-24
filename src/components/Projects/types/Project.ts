@@ -6,13 +6,7 @@ export interface Project {
   feature: string;
   technology: string;
   projectLink: string;
-  images: [
-    {
-      _id: string;
-      contentType: string;
-      data: string;
-    }
-  ];
+  images: string[];
 }
 export interface ProjectImages {
   _id: string;

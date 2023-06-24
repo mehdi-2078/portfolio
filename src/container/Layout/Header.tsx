@@ -2,7 +2,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 // import { MdMenu, MdClose } from 'react-icons/md';
 
 import { NavBarItems } from '../index';
@@ -14,7 +13,6 @@ export const Header = () => {
   //   setNav(!nav);
   // };
 
-  const router = useRouter();
   return (
     <div className="shadow-2xl bg-black/40 fixed z-20 pt-4 pb-4 w-[100%]">
       <div className="flex md:w-[80%] left-[10%] flex-wrap w-[90%] mx-auto ">
@@ -34,7 +32,7 @@ export const Header = () => {
               key={index}
               href={`#${navBarItem.href}`}
               className={`text-md hover:bg-white/25 py-1 px-2 rounded cursor-pointer
-               transition-all ${router.asPath === `/#${navBarItem.href}` && 'bg-white/25'}
+               transition-all
               `}
             >
               {navBarItem.title}

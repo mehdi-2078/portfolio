@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Image from 'next/image';
 import SwiperCore, { FreeMode, Navigation, Thumbs, Controller } from 'swiper';
@@ -8,31 +8,28 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SwiperClass from 'swiper/types/swiper-class';
+import Lightbox from 'yet-another-react-lightbox';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-import { ProjectImages } from '../Projects/types/Project';
+import 'yet-another-react-lightbox/styles.css';
+import { NextJsImage } from './NextImage';
 
-interface Props {
-  items: ProjectImages[];
-}
-
-export function MyGallery({ items }: Props) {
+export function MyGallery({ items }) {
   console.log({ items });
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper] = useState<SwiperClass>();
   const [secondSwiper] = useState<SwiperClass>();
-  // const swiper1Ref = useRef();
-  // const swiper2Ref = useRef();
+  const [myIndex, setIndex] = useState(-1);
+  const thumbnailsRef = useRef(null);
 
-  useLayoutEffect(() => {
-    // if (swiper1Ref.current) swiper1Ref.current.controller.control = swiper2Ref.current;
-  }, []);
-
+  const myImages = items.map((image) => ({
+    src: image,
+  }));
   return (
     <div className="w-[100%] ">
       <Swiper
-        // onSwiper={(swiper) => {
-        //   // if (swiper1Ref.current) swiper1Ref.current = swiper;
-        // }}
         controller={{ control: secondSwiper }}
         spaceBetween={10}
         slidesPerView={1}
@@ -44,13 +41,15 @@ export function MyGallery({ items }: Props) {
         modules={[FreeMode, Navigation, Thumbs, Controller]}
         className="h-[350px] md:h-[460px] w-[100%] rounded-xl"
       >
-        {items.map((item) => (
+        {items.map((item, index) => (
           <SwiperSlide key={item._id} className="">
             <Image
-              width={100}
-              height={100}
+              onClick={() => setIndex(index)}
+              width={1000}
+              height={1000}
               className="w-[100%] aspect-square"
-              src={`data:${item?.contentType};base64,${item?.data}`}
+              // src={`data:${item?.contentType};base64,${item?.data}`}
+              src={item ?? ''}
               alt=""
             />
           </SwiperSlide>
@@ -75,12 +74,29 @@ export function MyGallery({ items }: Props) {
               width={100}
               height={100}
               className="rounded-xl h-[100px] "
-              src={`data:${item?.contentType};base64,${item?.data}`}
+              // src={`data:${item?.contentType};base64,${item?.data}`}
+              src={item ?? ''}
               alt=""
             />
           </SwiperSlide>
         ))}
       </Swiper>
+      <Lightbox
+        plugins={[Thumbnails, Zoom]}
+        thumbnails={{ ref: thumbnailsRef }}
+        on={{
+          click: () => {
+            (thumbnailsRef.current?.visible
+              ? thumbnailsRef.current?.hide
+              : thumbnailsRef.current?.show)?.();
+          },
+        }}
+        open={myIndex >= 0}
+        index={myIndex}
+        close={() => setIndex(-1)}
+        slides={myImages}
+        render={{ slide: NextJsImage }}
+      />
     </div>
   );
 }

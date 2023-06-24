@@ -22,8 +22,8 @@ export const MyCarousel = ({ items }: CarouselProps): ReactElement => {
     infinite: true,
     lazyLoad: true,
     speed: 500,
-    className: 'py-10 mt-10',
-    // slidesToShow: 5,
+    className: 'py-6 mt-4',
+    slidesToShow: 4,
     centerMode: true,
     // @ts-ignore
     beforeChange: (current, next) => setImgIndex(next),
@@ -56,15 +56,15 @@ export const MyCarousel = ({ items }: CarouselProps): ReactElement => {
   };
   return (
     <>
-      <div className="w-10/12 md:w-[80%] pb-8 pt-[80px] mx-auto">
-        <TitleReadMore text="projects " link="projects" />
+      <div className="w-10/12 md:w-[80%] pb-8 pt-[60px] mx-auto">
+        <TitleReadMore text="projects" link="projects" />
         <Slider {...settings}>
           {items.map((item, index) => (
             <div
               onClick={() => router.push(`projects/${item.title}`)}
               key={index}
               className={`!w-[70%] cursor-pointer
-               bg-white mx-auto text-center transition-transform duration-700 ${
+               bg-white/90 mx-auto text-center transition-transform duration-700 ${
                  index === imgIndex
                    ? 'scale-x-[1.6] pb-20 pt-20 scale-y-[1.5] opacity-100'
                    : 'scale-x-[1.1] pb-6 pt-8 scale-y-[1.1] opacity-40 '
@@ -72,22 +72,27 @@ export const MyCarousel = ({ items }: CarouselProps): ReactElement => {
               `}
             >
               <div
-                className="px-10 border-red-600 w-[90%] rounded-xl bg-red-100 h-[180px]
+                className="border-red-600 w-[94%] rounded-xl bg-red-100 h-[270px]
                flex justify-center items-center mx-auto"
               >
-                <Image
-                  className="w-full h-full"
-                  width={380}
-                  height={474}
-                  src={`data:${item?.images[0].contentType};base64,${item?.images[0].data}`}
-                  alt="image"
-                />
+                {item.images[0] && (
+                  <Image
+                    className="w-full h-full"
+                    width={500}
+                    height={500}
+                    src={item.images[0]}
+                    // src={`data:${item?.images[0].contentType};base64,${item?.images[0].data}`}
+                    alt="image"
+                  />
+                )}
               </div>
-              <p className="text-black font-medium mt-1">{item.title}</p>
-              <div className="text-black flex justify-between mx-4 mt-3 text-xs">
-                <span>1402</span>
-                <span>more</span>
-              </div>
+              <p className="text-black text-xs bg-gray-300 inline px-1 font-medium mt-1">
+                &lt;{item.title} /&gt;
+              </p>
+              {/*<div className="text-black flex justify-between mx-4 mt-3 text-xs">*/}
+              {/*  <span>1402</span>*/}
+              {/*  <span>more</span>*/}
+              {/*</div>*/}
             </div>
           ))}
         </Slider>

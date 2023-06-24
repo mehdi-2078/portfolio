@@ -21,22 +21,22 @@ const Index = ({ resData }: Props) => {
           <div
             onClick={() => router.push(`projects/${item.title}`)}
             key={item._id}
-            className="flex cursor-pointer m-4 justify-center items-center p-3 md:p-8  bg-black/5
-          w-[45%] md:w-[30%] flex-col"
+            className="flex cursor-pointer m-4 justify-center items-center h-[500px]
+            px-6 py-10 bg-black/50 w-[45%] md:w-[30%] flex-col"
           >
-            <div className="w-full h-full">
-              <Image
-                className="w-full h-full"
-                width={60}
-                height={60}
-                src={`data:${item?.images[0].contentType};base64,${item?.images[0]?.data}`}
-                alt=""
-              />
-            </div>
+            <Image
+              className="w-full h-full mt-2"
+              width={500}
+              height={500}
+              // src={`data:${item?.images[0].contentType};base64,${item?.images[0]?.data}`}
+              src={item.images[0] ?? ''}
+              alt=""
+            />
             <div
               key={index}
               // onClick={() => setIndex(item.title)}
-              className="text-white mt-4 text-2xl hover:bg-white/25 py-1 px-2 rounded	cursor-pointer transition-all"
+              className="text-white text-lg mt-4 hover:bg-white/25 py-1 px-2 rounded
+              cursor-pointer transition-all"
             >
               {item.title}
             </div>

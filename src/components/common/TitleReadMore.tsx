@@ -6,7 +6,7 @@ export const TitleReadMore = ({ text, link }: { text: string; link?: string }) =
   const router = useRouter();
   return (
     <div
-      className="flex justify-between w-full mx-auto mb-[55px]"
+      className="flex justify-between w-full mx-auto"
       onClick={() => router.push(`${link}/`)}
     >
       <motion.span
