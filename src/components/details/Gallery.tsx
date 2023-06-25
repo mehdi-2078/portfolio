@@ -47,7 +47,7 @@ export const MyGallery = ({ items }: { items: string[] }) => {
               onClick={() => setIndex(index)}
               width={900}
               height={900}
-              className="w-[100%] aspect-square"
+              className="w-[100%]"
               // src={`data:${item?.contentType};base64,${item?.data}`}
               src={item ?? ''}
               alt=""

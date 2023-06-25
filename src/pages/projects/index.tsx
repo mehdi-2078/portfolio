@@ -28,8 +28,8 @@ const Index = ({ resData }: Props) => {
             <Image
               priority={true}
               className="w-full h-full mt-2"
-              width={600}
-              height={600}
+              width={1000}
+              height={1000}
               src={item.images[0] ?? pic}
               alt=""
             />

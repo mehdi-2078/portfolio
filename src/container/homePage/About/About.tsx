@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsDownload } from 'react-icons/bs';
 
 import mehdi from '../../../../public/assets/images/mehdi13.jpg';
@@ -25,7 +26,12 @@ export const About = () => {
           className="flex w-fit px-4 py-2 mt-auto mb-4 md:mb-8 bg-red-400/50 hover:bg-yellow-600
         items-center justify-center rounded cursor-pointer"
         >
-          <button className=" mr-2"> Download CV</button>
+          <Link
+            href="https://mehdizarei.storage.iran.liara.space/portfolio/mehdi_zarei_Resume1.pdf"
+            className=" mr-2"
+          >
+            Download CV
+          </Link>
           <BsDownload size={20} />
         </div>
       </div>

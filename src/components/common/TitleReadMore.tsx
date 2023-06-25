@@ -18,7 +18,7 @@ export const TitleReadMore = ({ text, link }: { text: string; link?: string }) =
         className="flex items-center cursor-pointer py-1  self-center border-yellow-400 border text-gray-200 px-2 text-lg
       rounded-xl  hover:bg-yellow-400 hover:text-black"
       >
-        <button className="mr-1 tracking-[0.075em]"> more</button>
+        <button className="mr-1 tracking-[0.075em]"> All Projects</button>
         <BsChevronRight />
       </div>
     </div>
