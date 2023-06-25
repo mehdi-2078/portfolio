@@ -16,8 +16,7 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import 'yet-another-react-lightbox/styles.css';
 import { NextJsImage } from './NextImage';
 
-export function MyGallery({ items }) {
-  console.log({ items });
+export const MyGallery = ({ items }: { items: string[] }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [firstSwiper] = useState<SwiperClass>();
   const [secondSwiper] = useState<SwiperClass>();
@@ -42,11 +41,12 @@ export function MyGallery({ items }) {
         className="h-[350px] md:h-[460px] w-[100%] rounded-xl"
       >
         {items.map((item, index) => (
-          <SwiperSlide key={item._id} className="">
+          <SwiperSlide key={index} className="">
             <Image
+              priority={true}
               onClick={() => setIndex(index)}
-              width={1000}
-              height={1000}
+              width={900}
+              height={900}
               className="w-[100%] aspect-square"
               // src={`data:${item?.contentType};base64,${item?.data}`}
               src={item ?? ''}
@@ -68,11 +68,12 @@ export function MyGallery({ items }) {
         modules={[Navigation, FreeMode, Thumbs, Controller]}
         className="h-[100px] mx-auto flex justify-center !w-[100%] cursor-pointer mt-[20px] rounded-xl"
       >
-        {items.map((item) => (
-          <SwiperSlide key={item._id} className="!w-[20%] swiper-slide-auto">
+        {items.map((item, index) => (
+          <SwiperSlide key={index} className="!w-[20%] swiper-slide-auto">
             <Image
-              width={100}
-              height={100}
+              priority={true}
+              width={900}
+              height={900}
               className="rounded-xl h-[100px] "
               // src={`data:${item?.contentType};base64,${item?.data}`}
               src={item ?? ''}
@@ -84,13 +85,6 @@ export function MyGallery({ items }) {
       <Lightbox
         plugins={[Thumbnails, Zoom]}
         thumbnails={{ ref: thumbnailsRef }}
-        on={{
-          click: () => {
-            (thumbnailsRef.current?.visible
-              ? thumbnailsRef.current?.hide
-              : thumbnailsRef.current?.show)?.();
-          },
-        }}
         open={myIndex >= 0}
         index={myIndex}
         close={() => setIndex(-1)}
@@ -99,4 +93,4 @@ export function MyGallery({ items }) {
       />
     </div>
   );
-}
+};

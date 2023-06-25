@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import axiosInstance from '../../../axios.config';
+import pic from '../../../public/favicon-16x16.png';
 import { Project } from '../../components/Projects/types/Project';
 
 interface Props {
@@ -25,11 +26,11 @@ const Index = ({ resData }: Props) => {
             px-6 py-10 bg-black/50 w-[45%] md:w-[30%] flex-col"
           >
             <Image
+              priority={true}
               className="w-full h-full mt-2"
-              width={500}
-              height={500}
-              // src={`data:${item?.images[0].contentType};base64,${item?.images[0]?.data}`}
-              src={item.images[0] ?? ''}
+              width={600}
+              height={600}
+              src={item.images[0] ?? pic}
               alt=""
             />
             <div

@@ -4,12 +4,17 @@ import { BsLink } from 'react-icons/bs';
 import { data } from './data';
 import { Title } from '../common/Title';
 
+type ProjectLink = {
+  internal?: string;
+  external?: string;
+};
 export const Experiences = () => {
   const router = useRouter();
-  const handleLink = (projectLink) => {
-    console.log({ projectLink });
-    if ('external' in projectLink) router.push(projectLink.external);
-    else if ('internal' in projectLink) window.location.href = projectLink.internal;
+  const handleLink = (projectLink: ProjectLink) => {
+    if (typeof projectLink.internal !== 'undefined') {
+      router.push(projectLink.internal).then((r) => console.log({ r }));
+    }
+    if (typeof projectLink.internal !== 'undefined') window.location.href = projectLink.internal;
   };
   return (
     <div className="w-[96%] md:w-[80%] mx-auto text-white pt-[80px]">

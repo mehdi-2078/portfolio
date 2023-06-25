@@ -89,10 +89,6 @@ export const MyCarousel = ({ items }: CarouselProps): ReactElement => {
               <p className="text-black text-xs bg-gray-300 inline px-1 font-medium mt-1">
                 &lt;{item.title} /&gt;
               </p>
-              {/*<div className="text-black flex justify-between mx-4 mt-3 text-xs">*/}
-              {/*  <span>1402</span>*/}
-              {/*  <span>more</span>*/}
-              {/*</div>*/}
             </div>
           ))}
         </Slider>

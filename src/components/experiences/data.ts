@@ -19,7 +19,7 @@ export const data = [
     date: 'February 2021 - May 2021',
     title: 'Pargar',
     projectLink: {
-      external: 'https://github.com/',
+      external: 'https://pargarcloud.com/',
     },
     position: 'Frontend developer (FullTime)',
     description:
@@ -53,7 +53,7 @@ export const data = [
     date: '2023',
     title: 'Fara learn',
     projectLink: {
-      external: 'https://youtube.com',
+      external: 'https://www.youtube.com/channel/UCw4aBAjcpauWUJDwyksSaGA',
     },
     position: 'Co-founder & Instructor',
     description:

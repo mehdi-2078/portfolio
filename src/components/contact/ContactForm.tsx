@@ -49,8 +49,6 @@ export const ContactForm = () => {
         }}
       >
         {({ errors, touched, handleSubmit }) => {
-          // eslint-disable-next-line no-console
-          console.log({ touched });
           return (
             <Form>
               <div className="w-full">

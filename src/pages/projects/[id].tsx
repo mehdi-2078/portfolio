@@ -13,7 +13,7 @@ const Id = ({ resData }: Props) => {
     <>
       <div className="flex pb-6 pt-20 md:pt-28 flex-col md:flex-row justify-around mx-auto">
         <div className="w-[90%] mx-auto md:w-[42%]">
-          <MyGallery items={resData.images} />
+          <MyGallery items={resData?.images} />
         </div>
         <div className="w-[90%] mx-auto md:w-[48%]">
           <Contents item={resData} />

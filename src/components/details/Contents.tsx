@@ -7,23 +7,23 @@ interface Props {
 export const Contents = ({ item }: Props) => {
   return (
     <div className="flex flex-col">
-      <div className="flex items-center text-2xl mt-4 font-semibold">
-        👉
-        <h1 className="text-[28px] mx-1 font-semibold">{item.title}</h1>
+      <div className="flex items-center text-[21px] mt-4 font-semibold">
+        <span className="text-2xl">🧑‍💻</span> <span>Name:</span>&nbsp;
+        <h1 className="mx-1 font-semibold">{item.title}</h1>
       </div>
-      <div className="text-[22px] mt-4">
-        <span className="text-2xl">👩‍💼</span> <span>Employer:</span>&nbsp;
+      <div className="text-[18px] mt-4">
+        <span className="text-2xl">👩‍💼</span>
+        <span>Employer:</span>&nbsp;
         <span>{item.employer}</span>
       </div>
-      <div className="text-[20px] mt-4">
+      <div className="text-[17px] mt-4">
+        <span className="text-2xl">📝</span> <span>Platform:</span>&nbsp;
+        <span>{item.feature}</span>
+      </div>
+      <div className="text-[17px] mt-4">
         <span className="text-2xl">🤖</span> <span>Technology:</span>&nbsp;
         <span>{item.technology}</span>
       </div>
-      <div className="text-[18px] mt-4">
-        <span className="text-2xl">📝</span> <span>Feature:</span>&nbsp;
-        <span>{item.feature}</span>
-      </div>
-
       <div className="text-[16px] mt-4">
         <span className="text-2xl">📜</span> <span>Description:</span>&nbsp;
         <span className=""> {item.description}</span>

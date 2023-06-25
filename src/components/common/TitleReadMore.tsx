@@ -5,10 +5,7 @@ import { BsChevronRight } from 'react-icons/bs';
 export const TitleReadMore = ({ text, link }: { text: string; link?: string }) => {
   const router = useRouter();
   return (
-    <div
-      className="flex justify-between w-full mx-auto"
-      onClick={() => router.push(`${link}/`)}
-    >
+    <div className="flex justify-between w-full mx-auto" onClick={() => router.push(`${link}/`)}>
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
