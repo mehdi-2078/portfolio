@@ -10,8 +10,8 @@ export const ContactInfo = () => {
         Thank you so much for visiting my personal website! I appreciate your interest in my work
         and skills. If you are considering hiring me for a job, offering a project, or simply want
         to get in touch, please do not hesitate to reach out through the contact form below. I am
-        eager to collaborate and share my expertise with you, so let's connect and discuss how I can
-        contribute to your success. Looking forward to hearing from you soon!
+        eager to collaborate and share my expertise with you, so let&apos;s connect and discuss how
+        I can contribute to your success. Looking forward to hearing from you soon!
       </p>
     </div>
   );
