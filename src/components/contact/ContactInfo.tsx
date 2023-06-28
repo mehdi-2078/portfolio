@@ -6,7 +6,7 @@ export const ContactInfo = () => {
           contact me
         </span>
       </div>
-      <p className="leading-8 text-sm md:text-lg">
+      <p className="leading-8 text-base md:text-lg">
         Thank you so much for visiting my personal website! I appreciate your interest in my work
         and skills. If you are considering hiring me for a job, offering a project, or simply want
         to get in touch, please do not hesitate to reach out through the contact form below. I am

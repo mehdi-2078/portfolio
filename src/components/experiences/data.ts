@@ -21,7 +21,7 @@ export const data = [
     projectLink: {
       external: 'https://pargarcloud.com/',
     },
-    position: 'Frontend developer (FullTime)',
+    position: 'Frontend developer',
     description:
       '- Creating static components with Sass, bootstrap\n' +
       '- Creating more than fifty components\n' +
@@ -43,7 +43,7 @@ export const data = [
     projectLink: {
       external: 'https://safemargin.ir/',
     },
-    position: 'React Native developer (FullTime)',
+    position: 'React Native developer',
     description:
       '- Making a music application\n' +
       '- Making a driving regulations application\n' +
