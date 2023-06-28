@@ -17,13 +17,13 @@ const Index = ({ resData }: Props) => {
 
   return (
     <div className="pt-20">
-      <div className="flex flex-wrap w-[94%] md:w-[80%] justify-between mx-auto  my-[60px]">
+      <div className="flex flex-wrap w-[94%] md:w-[86%] justify-between mx-auto  my-[60px]">
         {resData.map((item, index) => (
           <div
             onClick={() => router.push(`projects/${item.title}`)}
             key={item._id}
             className="flex cursor-pointer m-4 justify-center items-center h-[500px]
-            px-6 py-10 bg-black/50 w-[45%] md:w-[30%] flex-col"
+            px-6 py-10 bg-black/50 w-[100%] md:w-[30%] flex-col"
           >
             <Image
               priority={true}

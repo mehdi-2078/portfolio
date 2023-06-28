@@ -56,7 +56,7 @@ export const ContactForm = () => {
                   <div className="w-full md:w-[49%]">
                     <Field
                       name="firstName"
-                      placeholder="firstName"
+                      placeholder="First Name"
                       id="firstName"
                       className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'name', touched)}
@@ -68,7 +68,7 @@ export const ContactForm = () => {
                   <div className="w-full md:w-[49%]">
                     <Field
                       name="lastName"
-                      placeholder="lastName"
+                      placeholder="Last Name"
                       id="lastName"
                       className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'last_name', touched)}
@@ -82,7 +82,7 @@ export const ContactForm = () => {
                   <div className="w-full md:w-[49%]">
                     <Field
                       name="phone"
-                      placeholder="phone"
+                      placeholder="Mobile"
                       id="phone"
                       className="mb-4 md:mb-0 w-full py-[10px] md:py-[14px] rounded-md pl-4 text-white outline-none bg-gray-700 text-xl "
                       // style={getStyles(errors, 'phone_number', touched)}

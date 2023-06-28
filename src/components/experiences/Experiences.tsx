@@ -23,28 +23,30 @@ export const Experiences = () => {
         <div className="ml-0 sticky">
           <div className="container mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden p-0 md:p-10 h-full">
-              <div className="border-2-2 right-[50%] border-[#FFC100] absolute h-full border"></div>
-              <div className="border-2-2 left-[50%] border-[#FFC100] absolute h-full border"></div>
+              <div className="hidden md:block border-2-2 right-[50%] border-[#FFC100] absolute h-full border"></div>
+              <div className="hidden md:block border-2-2 left-[50%] border-[#FFC100] absolute h-full border"></div>
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex justify-between ${
+                  className={`flex justify-between border-b-[#FFC100] border-b-2 md:border-0 ${
                     index % 2 === 1 ? 'pl-3 md:pl-10 flex-row' : 'pr-3 md:pr-10 flex-row-reverse'
                   }`}
                 >
-                  <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-6/12 md:w-6/12 py-4 text-left">
+                  <div className="hidden md:block order-1 w-5/12"></div>
+                  <div className="order-1 w-11/12 mx-auto md:mx-0 md:w-6/12 py-4 text-left">
                     <div className="flex flex-col md:flex-row items-start md:items-center mb-4 md:mb-0">
-                      {item.projectLink && (
-                        <BsLink
-                          className="cursor-pointer"
-                          onClick={() => handleLink(item.projectLink)}
-                          size={28}
-                        />
-                      )}
-                      <p className="mb-3 mx-2 md:mb-1 font-bold text-md md:text-2xl">
-                        {item.title}
-                      </p>
+                      <div className="flex">
+                        {item.projectLink && (
+                          <BsLink
+                            className="cursor-pointer"
+                            onClick={() => handleLink(item.projectLink)}
+                            size={28}
+                          />
+                        )}
+                        <p className="mb-3 mx-2 md:mb-1 font-bold text-md md:text-2xl">
+                          {item.title}
+                        </p>
+                      </div>
                       <p className="text-xs text-gray-300">{item.position}</p>
                     </div>
                     <p className="mb-2 text-sm md:text-base text-yellow-300">{item.date}</p>

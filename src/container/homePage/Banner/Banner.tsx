@@ -8,7 +8,7 @@ import { SocialNetWork } from '../../../components';
 export const Banner = () => {
   return (
     <div
-      className="flex mt-24 md:mt-0 overflow-hidden max-h-[92vh] flex-col md:flex-row md:w-[80%]
+      className="flex mt-32 md:mt-0 overflow-hidden max-h-[92vh] flex-col md:flex-row md:w-[80%]
     w-[90%] mx-auto justify-center md:justify-between items-center"
     >
       <motion.div className="flex flex-col items-center md:items-start">

@@ -5,83 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c72bc88-447c-459c-8d32-61aa1341e119" name="Changes" comment="0.0.14 edit">
-      <change afterPath="$PROJECT_DIR$/src/components/common/SocialNetWork.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/feature.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/feature2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/feature3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/carissa-gan-LdfLThHJB7c-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/dad-hotel-5Bof9geg6YQ-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/janet-ganbold-rW_RkSNRKvc-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/jennifer-schmidt-zOlQ7lF-3vs-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/joseph-gonzalez-QaGDmf5tMiE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/lunar-rose-studio-YJ1HPtlDcpE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/food/victoria-shes-Qa29U4Crvn4-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/mehdi13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi2.JPEG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi3.JPEG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi4.JPEG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdi8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/mehdi8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/mehdiz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/nextjs-landing-page-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/nextjs-landing-page-screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/Trello_icon-icons.com_66775.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/Trello_icon-icons.com_66775.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/css_original_wordmark_logo_icon_146576.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/css_original_wordmark_logo_icon_146576.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/express_original_wordmark_logo_icon_146528.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/express_original_wordmark_logo_icon_146528.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/file_type_node_icon_130301.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/file_type_node_icon_130301.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/file_type_storybook_icon_130145.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/file_type_storybook_icon_130145.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/git_original_logo_icon_146509.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/git_original_logo_icon_146509.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/github_original_wordmark_logo_icon_146506.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/i18.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/i18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/icons8-react-native-256.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/icons8-react-native-256.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/javascript-39417.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/javascript_original_logo_icon_146455.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/javascript_original_logo_icon_146455.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/kisspng-responsive-web-design-web-development-bootstrap-ca-5b0055a1928422.6307867115267485776001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/material-ui.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/material-ui.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/mehdi3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/mongodb_original_wordmark_logo_icon_146425.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/mongodb_original_wordmark_logo_icon_146425.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/nextjs_icon_213852.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/nextjs_icon_213852.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/nodejs_original_wordmark_logo_icon_146412.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/pwa.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/pwa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/react_original_logo_icon_146374.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/react_original_logo_icon_146374.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/redux_original_logo_icon_146365.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/redux_original_logo_icon_146365.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/sass_original_logo_icon_146350.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/sass_original_logo_icon_146350.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/styled-components.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/styled-components.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills-icon/typescript_original_logo_icon_146317.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/skills-icon/typescript_original_logo_icon_146317.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/bootstrap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/css.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/html5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/javascript.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/react.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/skills/tailwind.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MyCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/ContactForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/Contents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/Gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/skills/SkillItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills/SkillItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Layout/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Layout/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/homePage/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/homePage/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/homePage/Banner/Banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/homePage/Banner/Banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/homePage/Skills/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/homePage/Skills/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/homePage/homePageItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/homePage/homePageItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/b.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/gallery.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/types/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects/types/Project.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/convertBase64.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/convertBase64.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mehdi/OneDrive/دسکتاپ/portfolio/backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mehdi/OneDrive/دسکتاپ/Followjet Test/my-app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -213,6 +137,8 @@
       <workItem from="1686281789680" duration="4218000" />
       <workItem from="1686748356307" duration="940000" />
       <workItem from="1686800126656" duration="597000" />
+      <workItem from="1687897806427" duration="88000" />
+      <workItem from="1687983833675" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.1 first commit">
       <created>1682420670528</created>
