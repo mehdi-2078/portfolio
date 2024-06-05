@@ -1,22 +1,14 @@
-import React from 'react';
-
 import ReactFullpage from '@fullpage/react-fullpage';
 import { motion, useScroll } from 'framer-motion';
 // import { GetStaticProps } from 'next';
-import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
 
 // import axiosInstance from '../../axios.config';
-import axiosInstance from '../../axios.config';
 import { MyCarousel } from '../components';
-import { Project } from '../components/Projects/types/Project';
+import { projects } from '../constants/projects';
 import { homePageItems } from '../container/homePage/homePageItems';
 
-interface Props {
-  resData: Project[];
-}
-
-const Index = ({ resData }: Props) => {
+const Index = () => {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -61,7 +53,7 @@ const Index = ({ resData }: Props) => {
                   className="section"
                   id={item.id}
                 >
-                  {item.id !== 'projects' ? item.component : <MyCarousel items={resData} />}
+                  {item.id !== 'projects' ? item.component : <MyCarousel items={projects} />}
                 </motion.div>
               ))}
             </ReactFullpage.Wrapper>
@@ -79,10 +71,10 @@ const Index = ({ resData }: Props) => {
 //   const resData = response.data;
 //   return { props: { resData } };
 // };
-export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await axiosInstance.get(`project/allProject`);
-  const resData = response.data;
-  return { props: { resData } };
-};
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const response = await axiosInstance.get(`project/allProject`);
+//   const resData = response.data;
+//   return { props: { resData } };
+// };
 
 export default Index;

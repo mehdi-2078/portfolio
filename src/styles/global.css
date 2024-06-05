@@ -11,10 +11,5 @@ body {
   min-height: 100vh;
   font-family: Roboto, serif;
   color: #ffffff;
-  background-image: linear-gradient(
-    to left bottom,
-    #263447,
-    #2b3e4e,
-    #36687f
-  );
+  background-image: linear-gradient(to left bottom, #263447, #2b3e4e, #36687f);
 }

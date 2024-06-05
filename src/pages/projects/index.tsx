@@ -1,24 +1,16 @@
-import * as React from 'react';
-
-import type { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import axiosInstance from '../../../axios.config';
 import pic from '../../../public/favicon-16x16.png';
-import { Project } from '../../components/Projects/types/Project';
+import { projects } from '../../constants/projects';
 
-interface Props {
-  resData: Project[];
-}
-
-const Index = ({ resData }: Props) => {
+const Index = () => {
   const router = useRouter();
 
   return (
     <div className="pt-20">
       <div className="flex flex-wrap w-[94%] md:w-[86%] justify-between mx-auto  my-[60px]">
-        {resData.map((item, index) => (
+        {projects.map((item, index) => (
           <div
             onClick={() => router.push(`projects/${item.title}`)}
             key={item._id}
@@ -46,12 +38,6 @@ const Index = ({ resData }: Props) => {
       </div>
     </div>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await axiosInstance.get(`project/allProject`);
-  const resData = response.data;
-  return { props: { resData } };
 };
 
 export default Index;
